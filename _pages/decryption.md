@@ -3,12 +3,9 @@ title: "The deCrYPtion action"
 permalink: /decryption/
 ---
 
-The deCrYPtion action
-======
-
 In 2018, I drafted and submitted a proposal in response to the annual Horizon 2020 Framework Programme call for a Marie Skłodowska-Curie Actions Individual Fellowship supported by the European Commission.
 
-![](/images/normal-reproduction-high-resolution.png)
+![](/images/normal-reproduction-low-resolution.jpg)
 
 My application was selected to be carried out.
 
