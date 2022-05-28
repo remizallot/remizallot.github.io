@@ -7,12 +7,29 @@ redirect_from:
   - /about/
   - /about.html
 ---
-Welcome!
+Dr Rémi Zallot, FHEA
+
+Research Associate at <a href="https://www.mib.manchester.ac.uk/">the Manchester Insitute of Biotechnology (MIB)</a>, a research institute of the <a href="https://www.manchester.ac.uk/">The University of Manchester</a>.
+
+Address:  
+Manchester Institute of Biotechnology  
+John Garside Building  
+Princess St  
+Manchester M1 7DN  
+England  
+United Kingdom
+
+
+Research interests
+======
 
 I am a biologist applying comparative genomics, a form of bioinformatics, to propose a physiological function for yet to be characterized microbial genes. Following hypothesis generation, an experimental phase using techniques from the fields of microbiology, genetics, biochemistry and physiology is applied, aiming to reach functional validation for genes of interest. My work is at the intersection of various disciplines.
 Ultimately, I aim to increase fundamental knowledge about gene functions, focusing primarily on health improvement.
 
-I am a Research Associate, working at <a href="https://www.mib.manchester.ac.uk/">the Manchester Insitute of Biotechnology</a>, at <a href="https://www.manchester.ac.uk/">The University of Manchester</a>.
+
+
+Initial training and previous work
+======
 
 I am a biologist by training. My initial curriculum took place at <a href="https://www.u-bordeaux.fr">Université de Bordeaux</a>, France. I obtained a Licence in Biology, with a specialisation in Biochemistry, a Master's in Plant Biology and Biotechnology. Working at the <a href="https://www.biomemb.cnrs.fr">Laboratoire de Biogenèse Membranaire</a>, I earned a Doctorate degree in Plant Biology, my thesis titled <a href="https://www.theses.fr/2011BOR21840">"Identification and characterization of a lipase expressed during Arabidopsis thaliana reserves hydrolysis"</a>.
 
@@ -22,7 +39,9 @@ This experience made me want to expand my skills on the bioinformatics side, and
 
 Looking forward to coming back to the European continent, I was successful with an application for a Marie Skłodowska-Curie Individual Fellowship, supported by the European Commission and its Horizon 2020 program. The <a href="https://cordis.europa.eu/project/id/839116"> deCrYPtion action</a> (ID 839116), "Decrypting Mycobacterium cytochrome P450 (CYP) physiological functions by testing hypotheses emitted from large-scale comparative genomics analysis" took place at <a href="https://www.swansea.ac.uk/">Swansea University</a> <a href="https://www.swansea.ac.uk/medicine/">Medical School</a>, in Wales, United Kingdom.
 
-My interest is now focused on applying my knowledge and experience to various projects at my current place of work: <a href="https://www.mib.manchester.ac.uk/">the Manchester Insitute of Biotechnology</a>.
+While at Swansea University, I enrolled into the offered <a href="https://www.swansea.ac.uk/iss/salt/">Teaching in Higher Education Postgraduate Certification programme</a>, leading to me becoming a <a href="https://www.advance-he.ac.uk/fellowship/fellowship">Fellow of the Higher Academy Education (FHEA)</a>.
+
+
 
 
 
