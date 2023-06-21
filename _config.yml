@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Rémi Zallot"
   avatar           : "RemiZallotAugust2021.jpg"
-  bio              : "Research Associate"
+  bio              : "Lecturer"
   location         : "Manchester, UK"
-  employer         : "The University of Manchester"
+  employer         : "Manchester Metropolitan University"
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=Remi+Zallot"
   googlescholar    : "https://scholar.google.com/citations?user=sMUlExUAAAAJ"
-  email            : "remi.zallot@manchester.ac.uk"
+  email            : "r.zallot@mmu.ac.uk"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              : "https://efi.igb.illinois.edu"
   bitbucket        :

@@ -7,41 +7,44 @@ redirect_from:
   - /about/
   - /about.html
 ---
-Dr Rémi Zallot, FHEA
 
-Research Associate at <a href="https://www.mib.manchester.ac.uk/">the Manchester Insitute of Biotechnology (MIB)</a>, a research institute of the <a href="https://www.manchester.ac.uk/">The University of Manchester</a>.
+<p><strong>Dr Rémi Zallot, FHEA</strong></p>
 
-Address:  
-Manchester Institute of Biotechnology  
-John Garside Building  
-Princess St  
-Manchester M1 7DN  
-England  
-United Kingdom
+<p>Lecturer in the <a href="https://www.mmu.ac.uk/life-sciences/">Department of Life Sciences</a> at <a href="https://www.mmu.ac.uk/">Manchester Metropolitan University</a>.</p>
 
+<p><strong>Address:</strong></p>
+<p>John Dalton Building<br>
+Chester Street<br>
+Manchester, M1 5GD<br>
+United Kingdom</p>
 
-Research interests
+<p><a href="https://www.mmu.ac.uk/life-sciences/staff/profile/dr-remi-zallot">View Lecturer Profile</a></p>
+
+Interests and expertise
 ======
 
-I am a biologist applying comparative genomics, a form of bioinformatics, to propose a physiological function for yet to be characterized microbial genes. Following hypothesis generation, an experimental phase using techniques from the fields of microbiology, genetics, biochemistry and physiology is applied, aiming to reach functional validation for genes of interest. My work is at the intersection of various disciplines.
-Ultimately, I aim to increase fundamental knowledge about gene functions, focusing primarily on health improvement.
+My work focuses on deepening our understanding of microbes with the ultimate goal of enhancing human health.
+
+I employ a multidisciplinary approach that merges bioinformatics — specifically, comparative genomics and genomic enzymology — with experimental validation techniques drawn from various disciplines such as microbiology, genetics, and biochemistry. The strategy I use allows me to identify and decipher the biological function of uncharacterised genes, enzymes, and transporters that are important for health improvement.
+
+I also contribute to the advancement of bioinformatics tools and provide support for their effective use. This aims to empower researchers to generate meaningful hypotheses easily.
+
+As an educator, I strive for effective learning. I aim to foster an environment that stimulates intellectual curiosity, deep understanding, and skill development. I’m committed to equipping my students with the necessary tools and knowledge to become the professionals they aspire to be.
+
 
 
 
 Initial training and previous work
 ======
 
-I am a biologist by training. My initial curriculum took place at <a href="https://www.u-bordeaux.fr">Université de Bordeaux</a>, France. I obtained a Licence in Biology, with a specialisation in Biochemistry, a Master's in Plant Biology and Biotechnology. Working at the <a href="https://www.biomemb.cnrs.fr">Laboratoire de Biogenèse Membranaire</a>, I earned a Doctorate degree in Plant Biology, my thesis titled <a href="https://www.theses.fr/2011BOR21840">"Identification and characterization of a lipase expressed during Arabidopsis thaliana reserves hydrolysis"</a>.
+<p>Trained as a biologist at the <a href="https://www.u-bordeaux.fr">Université de Bordeaux</a>, France, I specialised in Biochemistry during my Licence in Biology, further delving into Plant Biology and Biotechnology during my Master’s degree. My academic journey culminated in a PhD from the <a href="https://www.biomemb.cnrs.fr">Laboratoire de Biogenèse Membranaire</a>, where I defended my thesis on “Identification and characterization of a lipase expressed during Arabidopsis thaliana reserves hydrolysis” in 2011.</p>
 
-I then joined the <a href="https://microcell.ufl.edu">Microbiology and Cell Science Department</a> at the <a href="https://www.ufl.edu">University of Florida</a>, USA, attracted by what is described as "the comparative genomics approach". It is used to generate hypotheses regarding the function of genes. The comparative genomics approach relies on the examination of various association evidence between genes, and between genes and biological processes, to locate those uncharacterized genes in a functional context. I applied this approach to functionally characterize genes involved in B vitamin metabolism and tRNA modification metabolism, in plants and microbes.
+<p>Drawn by the investigative power of comparative genomics, I joined the <a href="https://microcell.ufl.edu">Microbiology and Cell Science Department</a> at the <a href="https://www.ufl.edu">University of Florida</a>, USA. Here, I contributed to characterising genes involved in B vitamin metabolism and tRNA modification metabolism in plants and microbes until 2016.</p>
 
-This experience made me want to expand my skills on the bioinformatics side, and I joined the <a href="https://efi.igb.illinois.edu">Enzyme Function Initiative </a> team located at the <a href="https://www.igb.illinois.edu">Carl R. Woese Institute for Genomic Biology (IGB)</a>, at the <a href="https://illinois.edu">University of Illinois at Urbana-Champaign</a>. Together, we increased the capabilities offered by the Enzyme Function Initiative webtools and provided multiple training workshops to biologists to describe how the tools can be used for hypothesis generation. In addition, experimental work focused on characterizing genes from the gut microbiome.
+<p>To further my bioinformatics skills, I joined the <a href="https://efi.igb.illinois.edu">Enzyme Function Initiative</a> team at the <a href="https://www.igb.illinois.edu">Carl R. Woese Institute for Genomic Biology (IGB)</a>, University of Illinois at Urbana-Champaign. There, we enhanced the capabilities of the Enzyme Function Initiative webtools and provided training to biologists, facilitating hypothesis generation. My research concentrated on characterising genes from the gut microbiome until 2019.</p>
 
-Looking forward to coming back to the European continent, I was successful with an application for a Marie Skłodowska-Curie Individual Fellowship, supported by the European Commission and its Horizon 2020 program. The <a href="https://cordis.europa.eu/project/id/839116"> deCrYPtion action</a> (ID 839116), "Decrypting Mycobacterium cytochrome P450 (CYP) physiological functions by testing hypotheses emitted from large-scale comparative genomics analysis" took place at <a href="https://www.swansea.ac.uk/">Swansea University</a> <a href="https://www.swansea.ac.uk/medicine/">Medical School</a>, in Wales, United Kingdom.
+<p>Securing a Marie Skłodowska-Curie Individual Fellowship, funded by the European Commission’s Horizon 2020 program, I returned to Europe to conduct the <a href="https://cordis.europa.eu/project/id/839116">deCrYPtion action (ID 839116)</a> at <a href="https://www.swansea.ac.uk/medicine/">Swansea University Medical School</a>, UK. This project, titled “Decrypting Mycobacterium cytochrome P450 (CYP) physiological functions”, utilized large-scale comparative genomics analysis. Concurrently, I completed the <a href="https://www.swansea.ac.uk/iss/salt/">Teaching in Higher Education Postgraduate Certification programme</a> at Swansea, becoming a <a href="https://www.advance-he.ac.uk/fellowship/fellowship">Fellow of the Higher Academy Education (FHEA)</a>.</p>
 
-While at Swansea University, I enrolled into the offered <a href="https://www.swansea.ac.uk/iss/salt/">Teaching in Higher Education Postgraduate Certification programme</a>, leading to me becoming a <a href="https://www.advance-he.ac.uk/fellowship/fellowship">Fellow of the Higher Academy Education (FHEA)</a>.
+<p>In the subsequent years, I expanded my experience as a Research Associate at the <a href="https://www.mib.manchester.ac.uk/">Manchester Institute of Biotechnology (MIB)</a>, an affiliate of <a href="https://www.manchester.ac.uk/">The University of Manchester</a>, until 2023.</p>
 
-
-
-
-
+<p>Since June 2023, I have been serving as a lecturer in the <a href="https://www.mmu.ac.uk/life-sciences/">Department of Life Sciences</a> at <a href="https://www.mmu.ac.uk/">Manchester Metropolitan University</a>, nurturing the next generation of scientists and researchers.</p>

@@ -5,7 +5,7 @@ permalink: /decryption/
 
 In 2018, I drafted and submitted a proposal in response to the annual Horizon 2020 Framework Programme call for a Marie Skłodowska-Curie Actions Individual Fellowship supported by the European Commission.
 
-![](/images/normal-reproduction-low-resolution.jpg)
+<img src="/images/normal-reproduction-low-resolution.jpg" alt="" width="400"/>
 
 My application was selected to be carried out.
 
