@@ -5,23 +5,26 @@
 # prevent it from being included in the site.
 
 main:
+  - title: "Join the lab"
+    url: /join/
+
+  - title: "Collaborators"
+    url: /collaborators/
+
+  - title: "Funding"
+    url: /funding/
+
   - title: "Publications"
     url: /publications/
 
-  - title: "Talks"
-    url: /talks/    
+  # - title: "Talks"
+  #   url: /talks/  
 
-  - title: "Teaching"
-    url: /teaching/    
-    
-  - title: "Portfolio"
-    url: /portfolio/
-        
-  - title: "Blog Posts"
-    url: /year-archive/
-    
+  - title: "deCrYPtion"
+    url: /decryption/
+  
   - title: "CV"
     url: /cv/
     
-  - title: "Guide"
-    url: /markdown/
+  # - title: "Guide"
+  #   url: /markdown/
