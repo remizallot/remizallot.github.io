@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "Dr. Rémi Zallot"
-excerpt: "Dr. Rémi Zallot"
+excerpt: "Rémi Zallot is a Senior Lecturer (Associate Professor) in Biochemistry at Manchester Metropolitan University, UK, researching microbial genes and enzymes to advance drug discovery and human health."
 author_profile: true
 redirect_from: 
   - /about/
@@ -28,7 +28,7 @@ To further develop my bioinformatics skills, I became part of the <a href="https
 As a Marie Skłodowska-Curie Fellow at <a href="https://www.swansea.ac.uk/medicine/">Swansea University Medical School</a>, UK, I led the <a href="https://cordis.europa.eu/project/id/839116">deCrYPtion project (ID 839116)</a>, which aimed to use large-scale comparative genomics to uncover the functions of Mycobacterium cytochrome P450 enzymes. Concurrently, I completed the <a href="https://www.swansea.ac.uk/iss/salt/">Teaching in Higher Education Postgraduate Certification programme</a> at Swansea and became a <a href="https://www.advance-he.ac.uk/fellowship/fellowship">Fellow of the Higher Education Academy (FHEA)</a>.<br />
 Following this, I worked as a Research Associate at the <a href="https://www.mib.manchester.ac.uk/">Manchester Institute of Biotechnology (MIB)</a>, an affiliate of <a href="https://www.manchester.ac.uk/">The University of Manchester</a>, until 2023.<br />
 
-**Since June 2023, I have been serving as a Lecturer, and since August 2024 as a Senior Lecturer, in Biochemistry in the <a href="https://www.mmu.ac.uk/life-sciences/">Department of Life Sciences</a> at <a href="https://www.mmu.ac.uk/">Manchester Metropolitan University</a>.**
+**Since June 2023, I have been serving as a Lecturer (Assistant Professor), and since August 2024 as a Senior Lecturer (Associate Professor), in Biochemistry in the <a href="https://www.mmu.ac.uk/life-sciences/">Department of Life Sciences</a> at <a href="https://www.mmu.ac.uk/">Manchester Metropolitan University</a>.**
 
 Current functions
 ======
