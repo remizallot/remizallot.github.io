@@ -40,3 +40,5 @@ I act as the bacterial lead for the University’s **Genetically Modified Organi
 I am an Expert Evaluator for the European Comission Horizon Europe programme, and I am a member of the UKRI Talent Peer Review College (PRC).
 
 I am a member of the <a href="https://www.microbiologyresearch.org">Microbiology Society</a> since 2019, and I am also a member of the <a href="https://www.ntmnetworkuk.com/">NTM Network UK</a> Basic Science & Microbiology interest group.
+
+Since July 2026, I have been a member of the <a href="https://acidfastclub.uk/">Acid Fast Club</a>, the UK's main scientific research forum for mycobacteria, bringing together researchers working on tuberculosis, leprosy, and related diseases.
