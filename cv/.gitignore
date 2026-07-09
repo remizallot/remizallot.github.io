@@ -1,0 +1,13 @@
+# LaTeX build artifacts -- keep cv.tex, publications.bib, and the
+# compiled cv.pdf tracked, ignore everything else compilation produces.
+*.aux
+*.bbl
+*.bbl-SAVE-ERROR
+*.bcf
+*.blg
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.fdb_latexmk
+*.fls

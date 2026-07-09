@@ -1,0 +1,225 @@
+% !TEX program = pdflatex
+% Rémi Zallot -- Curriculum Vitae
+%
+% Compile with:
+%   pdflatex cv.tex && biber cv && pdflatex cv.tex && pdflatex cv.tex
+%
+% Requires only a standard TeX Live / MacTeX install (tgheros, biblatex,
+% biber, fontawesome5 are all bundled) -- no OS-level font installation
+% needed, since tgheros loads TeX Gyre Heros through LaTeX's own font
+% system rather than searching installed system fonts.
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tgheros}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[margin=2cm]{geometry}
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{0F766E}
+\definecolor{darktext}{HTML}{1F2937}
+\definecolor{graytext}{HTML}{6B7280}
+\color{darktext}
+
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{ragged2e}
+\usepackage{microtype}
+
+\usepackage[
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent,
+  citecolor=accent,
+  pdftitle={Rémi Zallot - Curriculum Vitae},
+  pdfauthor={Rémi Zallot},
+  pdfsubject={Curriculum Vitae},
+  pdfkeywords={biochemistry, bioinformatics, genomics, enzyme function, curriculum vitae},
+  pdfusetitle
+]{hyperref}
+
+\usepackage[backend=biber,style=numeric-comp,sorting=ydnt,defernumbers=true,maxnames=11,minnames=10]{biblatex}
+\addbibresource{publications.bib}
+
+\titleformat{\section}
+  {\Large\bfseries\color{accent}}{}{0em}{}
+  [{\color{accent}\titlerule[0.8pt]}]
+\titlespacing{\section}{0pt}{1.3em}{0.7em}
+
+\titleformat{\subsection}
+  {\bfseries\color{darktext}}{}{0em}{}
+\titlespacing{\subsection}{0pt}{0.6em}{0.2em}
+
+\setlist[itemize]{leftmargin=1.1em, itemsep=0.15em, topsep=0.15em, parsep=0pt}
+
+\newcommand{\cvdate}[1]{\textcolor{graytext}{\small #1}}
+\newcommand{\cventry}[4]{%
+  \noindent\textbf{#1}\hfill\cvdate{#2}\\
+  \textit{#3}\\
+  #4\par\vspace{0.4em}
+}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% ---------------------------------------------------------------- Header
+\begin{center}
+  {\Huge\bfseries Dr Rémi Zallot}\\[0.35em]
+  {\large Senior Lecturer (Associate Professor) in Biochemistry}\\[0.15em]
+  {\large Department of Life Sciences, Manchester Metropolitan University, UK}\\[0.6em]
+  \small
+  \faEnvelope\ \href{mailto:remi.zallot@mmu.ac.uk}{remi.zallot@mmu.ac.uk} \quad\textbullet\quad
+  \faMapMarker*\ Manchester, United Kingdom \quad\textbullet\quad
+  \faGlobe\ \href{https://remizallot.github.io}{remizallot.github.io}\\[0.25em]
+  ORCID: \href{https://orcid.org/0000-0002-7317-1578}{0000-0002-7317-1578} \quad\textbullet\quad
+  \faGithubSquare\ \href{https://github.com/remizallot}{remizallot} \quad\textbullet\quad
+  \faGraduationCap\ \href{https://scholar.google.com/citations?user=sMUlExUAAAAJ}{Google Scholar}
+\end{center}
+
+% ---------------------------------------------------------------- Academic positions
+\section*{Academic Positions}
+
+\cventry{Senior Lecturer (Associate Professor) in Biochemistry}{Aug 2024 -- present}
+  {Department of Life Sciences, Manchester Metropolitan University, UK}{}
+
+\cventry{Lecturer (Assistant Professor) in Biochemistry}{Jun 2023 -- Aug 2024}
+  {Department of Life Sciences, Manchester Metropolitan University, UK}{}
+
+\cventry{Research Associate}{-- 2023}
+  {Manchester Institute of Biotechnology (MIB), The University of Manchester, UK}{}
+
+\cventry{Marie Skłodowska-Curie Individual Fellow}{Oct 2019 -- Mar 2022}
+  {Institute of Life Science, Swansea University Medical School, UK}
+  {``deCrYPtion'' project (ID 839116), decrypting \textit{Mycobacterium} cytochrome P450 physiological functions using comparative genomics. Supervisor: Prof. Steven L. Kelly.}
+
+\cventry{Enzyme Function Initiative team}{2016 -- 2019}
+  {Carl R. Woese Institute for Genomic Biology, University of Illinois at Urbana-Champaign, USA}
+  {Enhanced the EFI genomic enzymology web tools; characterised genes from the human gut microbiome; trained biochemists in comparative genomics approaches.}
+
+\cventry{Postdoctoral Researcher}{-- 2016}
+  {Microbiology and Cell Science Department, University of Florida, USA}
+  {Characterised genes involved in B vitamin metabolism and queuosine tRNA modification in plants and microbes.}
+
+% ---------------------------------------------------------------- Education
+\section*{Education}
+
+\cventry{PhD, Biochemistry / Plant Biology}{2011}
+  {Laboratoire de Biogenèse Membranaire}
+  {Thesis: \textit{Identification and characterization of a lipase expressed during Arabidopsis thaliana reserves hydrolysis}.}
+
+\cventry{Master's, Plant Biology and Biotechnology}{}
+  {Université de Bordeaux, France}{}
+
+\cventry{Licence, Biochemistry}{}
+  {Université de Bordeaux, France}{}
+
+% ---------------------------------------------------------------- Research interests
+\section*{Research Interests}
+
+My aim is to advance our fundamental understanding of microbes to enhance human health. I focus on characterising and understanding the functions of genes from microbes, particularly pathogens, to leverage this knowledge for developing new drugs and biotechnological applications. My approach is multidisciplinary, combining bioinformatics --- including comparative genomics and genomic enzymology --- with experimental techniques from microbiology, genetics, and biochemistry.
+
+% ---------------------------------------------------------------- Funding
+\section*{Grants and Funding}
+
+\cventry{The Academy of Medical Sciences -- Springboard Award (SBF009\textbackslash1016)}{Aug 2024 -- Jul 2026}
+  {£125,000}
+  {STEROSPRING: Characterising an Uncharted Lanosterol Catabolic Pathway in Non-Tuberculous Mycobacterial (NTM) Species.}
+
+\cventry{MMU Research and Knowledge Exchange -- Research Accelerator Grant}{Jan -- Dec 2023}
+  {£7,000}
+  {Deciphering an Uncharted Sterol Catabolic Pathway and Its Relevance in Non-Tuberculous Mycobacterial Infection.}
+
+\cventry{Manchester-Melbourne-Toronto (MMT) Research Funds}{Apr 2023}
+  {£6,960 -- Grant P122678}
+  {Missing Links in Global Sulphur Metabolism. Instructor for Genomic Enzymology and Enzyme Function Initiative training, Melbourne, Australia.}
+
+\cventry{Marie Skłodowska-Curie Individual Fellowship}{Oct 2019 -- Mar 2022}
+  {€212,933 -- European Commission, Horizon 2020, Grant 839116}{}
+
+\cventry{Higher Education Investment and Recovery Fund}{Aug 2021 -- Feb 2022}
+  {£33,954 -- Higher Education Funding Council for Wales (HEFCW)}{}
+
+\cventry{Inception Programme (Investissement d'Avenir) -- Travel Grant}{Jun 2019}
+  {€3,000 -- Grant ANR-16-CONV-0005}
+  {Workshop Instructor, ``From Genes to Function: A Survival Guide to Web-Based Tools for Microbiologists,'' Institut Pasteur, Paris.}
+
+\cventry{Sêr Cymru II COFUND Fellowship}{Jul 2019}
+  {£173,000 -- Grant SU190}
+  {Offer declined due to concurrent MSCA Individual Fellowship.}
+
+\cventry{Wales Marie Skłodowska-Curie Individual Fellowship Summer School}{May 2018}
+  {£2,000 travel grant}{}
+
+\cventry{Allocation de recherche (PhD Research Allowance Award)}{Sep 2008 -- Nov 2011}
+  {€90,000}
+  {French Ministry of Higher Education and Research (Ministère de l'Enseignement Supérieur et de la Recherche).}
+
+% ---------------------------------------------------------------- Publications
+\section*{Publications}
+\nocite{*}
+\printbibliography[heading=none]
+
+% ---------------------------------------------------------------- Teaching
+\section*{Teaching}
+
+\cventry{Module Leader, Biomedical Cell Biology (BCB)}{2023 -- present}
+  {Manchester Metropolitan University, Department of Life Sciences}
+  {Final-year optional module for students on the accredited Biomedical Science programme.}
+
+\cventry{Medical Microbiology}{2023 -- present}
+  {Manchester Metropolitan University, Department of Life Sciences}
+  {Teaching contributor; supervises final-year student projects.}
+
+% ---------------------------------------------------------------- Talks
+\section*{Talks and Presentations}
+
+\begin{itemize}[leftmargin=1.1em]
+\item \textbf{Summer 2026 meeting of the Acid Fast Club} --- Conference attended. Liverpool School of Tropical Medicine, Liverpool, UK. July 2026.
+\item \textbf{Department Summer research symposium Seminar} --- Oral presentation. Manchester Metropolitan University, Department of Life Sciences, Manchester, UK. April 2026.
+\item \textbf{Invited Seminar} --- Invited talk. Institute of Medical Research, Northwestern Polytechnical University, Xi'an, China. April 2026.
+\item \textbf{Invited Seminar} --- Invited talk. Shanghai Jiao Tong University Medical School, Shanghai, China. April 2026.
+\item \textbf{Tuberculosis: Understanding the Disease Across Scales} --- Poster. Keystone Symposium, Cape Town, South Africa. March 2026.
+\item \textbf{Winter Acid Fast Club meeting} --- Conference attended. Acid Fast Club, London, UK. January 2026.
+\item \textbf{Leicester 2025 summer session of the Acid Fast Club meeting} --- Oral presentation. Acid Fast Club, Leicester, UK. July 2025.
+\item \textbf{Invited talk} --- National University of Singapore, Singapore. April 22--26, 2024.
+\item \textbf{Poster presentation} --- Gordon Research Conference on Enzymes, Coenzymes and Metabolic Pathways, Waterville Valley, NH, USA. July 16--21, 2023.
+\item \textbf{Invited talk and EFI workshop} --- National University of Singapore, Singapore. November 5--10, 2023.
+\item \textbf{Invited talk} --- Chinese Academy of Sciences, Institute of Microbiology, Beijing, China. December 21, 2023.
+\item \textbf{Invited talk} --- Northwest University, Xi'an, China. December 24, 2023.
+\item \textbf{Understanding antimicrobial resistance requires characterising unknown genes} --- Invited talk. Manchester Institute of Biotechnology Fellowship days, The University of Manchester, Manchester, UK. January 26, 2022.
+\item \textbf{Comparative genomics and genomic enzymology approaches for functional assignment} --- Poster (selected for a short oral presentation). Manchester Institute of Biotechnology Annual Science Day, Manchester, UK. 2022.
+\item \textbf{Similarity Networks and Genome Neighborhood Networks for function assignment} --- Invited talk. School of Chemistry, Cardiff University, Cardiff, UK. April 3, 2021.
+\item \textbf{Genomic enzymology web tools for functional assignment} --- Invited talk. Institut Pasteur, Centre of Bioinformatics, Biostatistics and Integrative Biology, Paris, France. June 20, 2019.
+\item \textbf{QueI and its associated activator QueJ are non-orthologous replacement of the nitrile reductase QueF in the queuosine biosynthesis pathway} --- Poster. Gordon Research Seminar and Conference, Enzymes, Coenzymes and Metabolic Pathways, Waterville Valley, NH, USA. 2018.
+\item \textbf{QueI and its associated activator QueJ are non-orthologous replacement of the nitrile reductase QueF in the queuosine biosynthesis pathway} --- Poster. Frontiers in Metallobiochemistry Symposium and Bioinorganic Workshop, State College, PA, USA. 2018.
+\item \textbf{Comparative genomics for the identification of unknown genes, enzymes and transporters involved in Queuosine metabolism} --- Invited talk. University of Illinois at Urbana-Champaign, USA. August 5, 2016.
+\item \textbf{Production of molecules of interest from plants in Yeast, can comparative genomics help?} --- Invited talk. Université François Rabelais, Tours, France. May 6, 2016.
+\item \textbf{Is Streptomyces secondary metabolism regulation involving lipid rafts?} --- Invited talk. Université Paris 11, Orsay, France. May 17, 2016.
+\item \textbf{Identification of missing enzymes and transporters involved in the synthesis and salvage of Queuosine by comparative genomics} --- Poster. EMBO Conference, Ribosome Structure and Function, Strasbourg, France. 2016.
+\item \textbf{Identification of missing enzymes and transporters involved in the synthesis and salvage of Queuosine by comparative genomics} --- Poster. DOE JGI User meeting, Genomics of Energy and Environment Meeting, Walnut Creek, CA, USA. 2016.
+\item \textbf{Identification of genes involved in Queuosine Salvage} --- Poster. Gordon Research Conference, RNA editing, Lucca (Barga), Italy. 2015.
+\item \textbf{Salvage of the thiamin pyrimidine moiety by plant TenA proteins lacking an active site cysteine} --- Invited talk. Plant Biology conference, Portland, OR, USA. July 12--16, 2014.
+\item \textbf{Identification of maize and Arabidopsis genes for the salvage of thiamin breakdown products} --- Poster. Gordon Research Conference, Plant Metabolic Engineering, Waterville Valley, NH, USA. 2013.
+\item \textbf{Identification of a potential queuine salvage gene in eukaryotes} --- Poster. XXIV tRNA Conference, Olmué, Chile. 2012.
+\item \textbf{Identification of a triacylglycerol-lipase from Brassica napus by functional proteomics} --- Poster (selected for a short oral presentation). 5th European Symposium on Plant Lipids, Gdansk, Poland. 2011.
+\end{itemize}
+
+% ---------------------------------------------------------------- Service
+\section*{Professional Service and Memberships}
+
+\begin{itemize}
+\item Member, Acid Fast Club (since July 2026)
+\item Expert Evaluator, European Commission Horizon Europe programme
+\item Member, UKRI Talent Peer Review College (PRC)
+\item Bacterial lead, Genetically Modified Organisms Health and Safety Committee, Manchester Metropolitan University
+\item Carbon Literacy Champion, Department of Life Sciences, Manchester Metropolitan University
+\item Member, Microbiology Society (since 2019)
+\item Member, NTM Network UK, Basic Science \& Microbiology interest group
+\item Fellow of the Higher Education Academy (FHEA)
+\end{itemize}
+
+\end{document}
