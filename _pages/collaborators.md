@@ -8,7 +8,7 @@ Collaborators
 =====
 - John Gerlt <a href="https://mcb.illinois.edu/directory/profile/j-gerlt">(University of Illinois at Urbana-Champaign)</a>
 - Yi Jin <a href="https://research.manchester.ac.uk/en/persons/yi.jin">(University of Manchester)</a>
-- Valérie de Crécy-Lagard <a href="https://microcell.ufl.edu/people/valerie-de-crecy-lagard">(University of Florida)</a>
+- Valérie de Crécy-Lagard <a href="https://microcell.ufl.edu/about-us-/people/valerie-de-crecy-lagard/">(University of Florida)</a>
 - Wen Shan Yew <a href="https://medicine.nus.edu.sg/bch/faculty/yew-wen-shan/">(National University of Singapore)</a>
 - Josie Parker <a href="https://profiles.cardiff.ac.uk/staff/parkerj21">(Cardiff University)</a>
 - Hua Wang <a href="https://www.strath.ac.uk/staff/wanghuadr/">(University of Strathclyde)</a>
