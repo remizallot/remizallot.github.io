@@ -36,7 +36,7 @@ Funded by: The Higher Education Funding Council for Wales (HEFCW)<br />
 Duration: August 1st, 2021 – February 28th, 2022<br />
 Amount: £33,954
 
-- **Inception program (Investissement d’Avenir) - Travel Grant (Workshop Instructor)**<br />
+- **Inception programme (Investissement d’Avenir) - Travel Grant (Workshop Instructor)**<br />
 Role: Workshop Instructor at Institut Pasteur (Paris) - Grant ANR-16-CONV-0005<br />
 Duration: June 17th to 21st, 2019<br />
 From Genes to Function: A Survival Guide to Web-Based Tools for Microbiologists<br />
