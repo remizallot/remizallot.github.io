@@ -56,11 +56,14 @@ for path in sorted(glob.glob("_publications/*.md")):
     year = date[:4] if date else "n.d."
     venue = html.unescape((get("venue") or "").strip("'\""))
     citation = html.unescape((get("citation") or "").strip("'\""))
+    excerpt = html.unescape((get("excerpt") or "").strip("'\""))
+    doi_m = re.match(r'DOI:\s*(\S+)', excerpt)
+    doi = doi_m.group(1) if doi_m else None
     m = re.match(r'^(.*?)\.\s*"(.*)"\.\s*(.*?),\s*(\d{4})\.?$', citation)
     authors_raw = m.group(1).strip() if m else citation.split('. "')[0].strip()
     authors = [a.strip() for a in authors_raw.split(",") if a.strip()]
     truncated = len(authors) == 10  # Google Scholar caps author lists at 10
-    entries.append({"title": title, "year": year, "venue": venue, "authors": authors, "truncated": truncated})
+    entries.append({"title": title, "year": year, "venue": venue, "authors": authors, "truncated": truncated, "doi": doi})
 
 entries.sort(key=lambda e: (e["year"], e["title"]), reverse=True)
 
@@ -75,7 +78,10 @@ for e in entries:
     used[key] = used.get(key, -1) + 1
     if used[key]: key = f"{key}{used[key]}"
     author_field = " and ".join(e["authors"]) + (" and others" if e["truncated"] else "")
-    lines.append(f'@article{{{key},\n  author  = {{{author_field}}},\n  title   = {{{e["title"].replace("&", r"\&")}}},\n  journal = {{{e["venue"] or "n.d."}}},\n  year    = {{{e["year"]}}},\n}}\n')
+    title_escaped = e["title"].replace("&", r"\&")
+    venue_escaped = (e["venue"] or "n.d.").replace("&", r"\&")
+    doi_line = f'\n  doi     = {{{e["doi"]}}},' if e["doi"] else ""
+    lines.append(f'@article{{{key},\n  author  = {{{author_field}}},\n  title   = {{{title_escaped}}},\n  journal = {{{venue_escaped}}},\n  year    = {{{e["year"]}}},{doi_line}\n}}\n')
 
 with open("cv/publications.bib", "w", encoding="utf-8") as f:
     f.write("\n".join(lines))
@@ -83,11 +89,12 @@ EOF
 ```
 
 After regenerating, re-check for any titles containing raw `&`, Greek
-letters, or other LaTeX-special characters (the script escapes `&`
-automatically, but new entries with e.g. Greek letters need manual
-`$\beta$`-style math-mode escaping -- see the existing β-lactone entry
-for the pattern) and re-verify the PhD thesis entry is still typed as
-`@phdthesis`, not `@article` (the script always emits `@article`).
+letters, or other LaTeX-special characters (the script escapes `&` in
+both title and journal automatically, but new entries with e.g. Greek
+letters need manual `$\beta$`-style math-mode escaping -- see the
+existing β-lactone entry for the pattern) and re-verify the PhD thesis
+entry is still typed as `@phdthesis` with no `journal` field, not
+`@article` (the script always emits `@article`).
 
 ## Design notes
 
