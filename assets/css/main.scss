@@ -8,11 +8,12 @@
    sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
  */
 
-@import 
+@import
     "vendor/breakpoint/breakpoint",
 
     "themes",
-    "theme/{{ site.site_theme | default: 'default' }}",
+    "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
+    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
 
     "include/mixins",
     "vendor/susy/susy",
@@ -35,5 +36,5 @@
     "layout/archive",
     "layout/sidebar",
 
-    "vendor/magnific-popup/magnific-popup"
+    "layout/json_cv"
 ;

@@ -13,7 +13,6 @@ M1 5GD<br>
 Manchester<br>
 United Kingdom
 
-
 Interests and Expertise
 ======
 **My aim is to advance our fundamental understanding of microbes to enhance human health.**<br />

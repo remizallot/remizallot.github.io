@@ -7,8 +7,7 @@
   background: var(--global-masthead-bg-color);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--global-border-color);
-  height: $masthead-height;
+  height: fit-content;
   top: 0;
   width: 100%;
 
@@ -17,6 +16,15 @@
   -webkit-animation-delay: 0.15s;
           animation-delay: 0.15s;
   z-index: 20;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    background: var(--global-border-color);
+    width: 100%;
+  }
 
   &__inner-wrap {
     @include container;
@@ -27,8 +35,7 @@
             align-items: center;
     -webkit-box-pack: justify;
             justify-content: space-between;
-    height: $masthead-height;
-    padding: 0 1em;
+    padding: 0.5em 1em;
     font-family: $sans-serif-narrow;
 
     @include breakpoint($x-large) {
@@ -71,59 +78,16 @@
   }
 }
 
-/*
-   Dark mode toggle
-   ========================================================================== */
-
-.theme-toggle {
-  -webkit-box-flex: 0;
-          flex: 0 0 auto;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  margin-left: 0.5em;
-  padding: 0;
-  color: var(--global-masthead-link-color);
-  background: transparent;
-  border: 1px solid var(--global-border-color) !important;
-  border-radius: 50%;
-  cursor: pointer;
-  -webkit-transition: $global-transition;
-  transition: $global-transition;
-
-  &:hover {
-    color: var(--global-accent-color);
-    border-color: var(--global-accent-color) !important;
-  }
-
-  &__icon {
-    display: block;
-
-    &--sun {
-      display: none;
-    }
-  }
+.masthead__menu-item.selected a {
+  color: var(--global-text-color);
+  font-weight: 700;
+  border-bottom: 2px solid var(--global-text-color);
+  pointer-events: none; /* Move this here */
+  cursor: default; /* Move this here too */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .theme-toggle__icon--sun {
-    display: block;
-  }
-
-  :root:not([data-theme="light"]) .theme-toggle__icon--moon {
-    display: none;
-  }
-}
-
-:root[data-theme="dark"] .theme-toggle__icon--sun {
-  display: block;
-}
-
-:root[data-theme="dark"] .theme-toggle__icon--moon {
-  display: none;
+.masthead__menu-item.selected a:hover {
+  color: var(--global-text-color);
+  border-bottom: 2px solid var(--global-text-color);
+  /* No need to repeat pointer-events and cursor here */
 }

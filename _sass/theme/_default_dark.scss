@@ -1,0 +1,83 @@
+/* ==========================================================================
+   DEFAULT THEME - DARK VERSION
+   ========================================================================== */
+
+/* Color codes used for the theme (cool slate scale, dark) */
+$gray                       : #94a3b8;
+$dark-gray                  : #cbd5e1;
+$darker-gray                : #e2e8f0;
+$light-gray                 : #94a3b8;
+
+/* Accent (brand) color */
+$accent-color                : #2dd4bf;
+$accent-color-hover           : #5eead4;
+$accent-color-light           : #99f6e4;
+
+/* Color codes used for the site */
+$danger-color               : #dc2626;
+$info-color                 : #0369a1;
+$notice-color               : #6b7280;
+$success-color              : #16a34a;
+$warning-color              : #d97706;
+
+/* Other basic settings for the template */
+$border-radius              : 10px;
+$box-shadow                 : 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 14px rgba(15, 23, 42, 0.07);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height             : 64px;
+$navicon-width               : 28px;
+$navicon-height              : 4px;
+$sidebar-link-max-width      : 250px;
+$sidebar-screen-min-width    : 1024px;
+
+@mixin default-dark-vars {
+    --global-base-color                 : #{$accent-color};
+    --global-bg-color                   : #0b1220;
+    --global-card-bg-color              : #121b2e;
+    --global-footer-bg-color            : #0b1220;
+    --global-masthead-bg-color          : rgba(11, 18, 32, 0.85);
+    --global-border-color               : #24304a;
+    --global-dark-border-color          : #24304a;
+    --global-code-background-color      : #121b2e;
+    --global-code-text-color            : #{$dark-gray};
+    --global-fig-caption-color          : #{$light-gray};
+    --global-accent-color               : #{$accent-color};
+    --global-accent-color-hover         : #{$accent-color-hover};
+    --global-link-color                 : #{$accent-color};
+    --global-link-color-hover           : #{$accent-color-hover};
+    --global-link-color-visited         : #{$accent-color-light};
+    --global-masthead-link-color        : #{$darker-gray};
+    --global-masthead-link-color-hover  : #{$accent-color};
+    --global-text-color                 : #{$darker-gray};
+    --global-text-color-light           : #{$light-gray};
+    --global-thead-color                : #1a2540;
+}
+
+/* Auto dark mode, follows OS preference unless the visitor picks explicitly
+   (the theme toggle's data-theme attribute, handled below, always wins) */
+@media (prefers-color-scheme: dark) {
+    html:not([data-theme="light"]) {
+        @include default-dark-vars;
+    }
+}
+
+/* Dark theme for the site, chosen via the theme toggle */
+html[data-theme="dark"] {
+    @include default-dark-vars;
+}
+
+/* A few hardcoded brand colors (e.g. GitHub's near-black mark) are invisible
+   against a dark background, so give them a lighter dark-mode tint */
+@media (prefers-color-scheme: dark) {
+    html:not([data-theme="light"]) .social-icons .fa-github,
+    html:not([data-theme="light"]) .social-icons .fa-github-alt,
+    html:not([data-theme="light"]) .social-icons .fa-github-square {
+        color: #f0f6fc;
+    }
+}
+
+html[data-theme="dark"] .social-icons .fa-github,
+html[data-theme="dark"] .social-icons .fa-github-alt,
+html[data-theme="dark"] .social-icons .fa-github-square {
+    color: #f0f6fc;
+}
