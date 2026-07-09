@@ -42,6 +42,7 @@
 .archive__item-title {
   margin-bottom: 0.25em;
   font-family: $sans-serif-narrow;
+  font-weight: 600;
 
   a + a {
     opacity: 0.5;
@@ -90,16 +91,29 @@
    ========================================================================== */
 
 .list__item {
+  padding: 1.25em 1.5em;
+  margin-bottom: 1em;
+  background-color: var(--global-card-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+  -webkit-transition: $global-transition;
+  transition: $global-transition;
+
+  &:hover {
+    border-color: var(--global-accent-color);
+    box-shadow: $box-shadow;
+  }
+
   @include breakpoint($medium) {
-    padding-right: $right-sidebar-width-narrow;
+    padding-right: 1.5em;
   }
 
   @include breakpoint($large) {
-    padding-right: $right-sidebar-width;
+    padding-right: 1.5em;
   }
 
   @include breakpoint($x-large) {
-    padding-right: $right-sidebar-width-wide;
+    padding-right: 1.5em;
   }
 
   .page__meta {

@@ -10,20 +10,26 @@
   /* default button */
   display: inline-block;
   margin-bottom: 0.25em;
-  padding: 0.5em 1em;
+  padding: 0.6em 1.25em;
   color: #fff !important;
   font-family: $sans-serif;
   font-size: $type-size-6;
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
   text-decoration: none;
-  background-color: var(--global-base-color);
+  background-color: var(--global-accent-color);
   border: 0 !important;
-  border-radius: $border-radius;
+  border-radius: 999px;
   cursor: pointer;
+  -webkit-transition: $global-transition;
+  transition: $global-transition;
 
   &:hover {
-    background-color: mix(white, #000, 20%);
+    background-color: var(--global-accent-color-hover);
+    -webkit-transform: translateY(-1px);
+        -ms-transform: translateY(-1px);
+            transform: translateY(-1px);
+    box-shadow: $box-shadow;
   }
 
   .icon {

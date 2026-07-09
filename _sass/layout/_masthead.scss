@@ -4,7 +4,9 @@
 
 .masthead {
   position: fixed;
-  background: var(--global-bg-color);
+  background: var(--global-masthead-bg-color);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--global-border-color);
   height: $masthead-height;
   top: 0;
@@ -19,7 +21,14 @@
   &__inner-wrap {
     @include container;
     @include clearfix;
-    padding: 1em 1em 1em;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    height: $masthead-height;
+    padding: 0 1em;
     font-family: $sans-serif-narrow;
 
     @include breakpoint($x-large) {
@@ -37,6 +46,9 @@
 }
 
 .masthead__menu {
+  -webkit-box-flex: 1;
+          flex: 1 1 auto;
+  min-width: 0;
 
   ul {
     margin: 0;
@@ -47,7 +59,7 @@
 }
 
 .masthead__menu-item {
-  background-color: var(--global-bg-color);
+  background-color: transparent;
   display: block;
   list-style-type: none;
   white-space: nowrap;
@@ -55,5 +67,63 @@
   &--lg {
     padding-right: 2em;
     font-weight: 700;
+    letter-spacing: -0.01em;
   }
+}
+
+/*
+   Dark mode toggle
+   ========================================================================== */
+
+.theme-toggle {
+  -webkit-box-flex: 0;
+          flex: 0 0 auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-left: 0.5em;
+  padding: 0;
+  color: var(--global-masthead-link-color);
+  background: transparent;
+  border: 1px solid var(--global-border-color) !important;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: $global-transition;
+  transition: $global-transition;
+
+  &:hover {
+    color: var(--global-accent-color);
+    border-color: var(--global-accent-color) !important;
+  }
+
+  &__icon {
+    display: block;
+
+    &--sun {
+      display: none;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle__icon--sun {
+    display: block;
+  }
+
+  :root:not([data-theme="light"]) .theme-toggle__icon--moon {
+    display: none;
+  }
+}
+
+:root[data-theme="dark"] .theme-toggle__icon--sun {
+  display: block;
+}
+
+:root[data-theme="dark"] .theme-toggle__icon--moon {
+  display: none;
 }

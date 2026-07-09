@@ -11,3 +11,10 @@ Gemfile.lock
 # Ingore files created by npm
 node_modules
 package-lock.json
+
+# Local-only preview setup (older Ruby-compatible Jekyll pin, not used in production)
+.bundle/
+vendor/
+Gemfile.local
+Gemfile.local.lock
+_config_local.yml
