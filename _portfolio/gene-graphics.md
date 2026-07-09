@@ -5,4 +5,4 @@ collection: portfolio
 date: 2018-01-01
 ---
 
-Gene Graphics is a genomic neighborhood data visualization web application I created, described in ["Gene Graphics: a genomic neighborhood data visualization web application"](/publication/2018-01-01-Gene-Graphics-a-genomic-neighborhood-data-visualization-web-application) (*Bioinformatics*, 2018), with Katherine Harrison and Valérie de Crécy-Lagard.
+I built Gene Graphics, a web application for visualising genomic neighbourhoods, with Katherine Harrison and Valérie de Crécy-Lagard --- described in ["Gene Graphics: a genomic neighborhood data visualization web application"](/publication/2018-01-01-Gene-Graphics-a-genomic-neighborhood-data-visualization-web-application) (*Bioinformatics*, 2018).
