@@ -26,3 +26,9 @@ package-lock.json
 Gemfile.local
 Gemfile.local.lock
 _config_local.yml
+
+# macOS reports this file's name in NFC form, but it's already tracked in NFD
+# form (see files/pdf/CV Zallot Rémi...) -- APFS resolves both spellings
+# to the same file, so ignore the NFC path to stop it being added as a
+# separate (duplicate-content) tracked file.
+files/pdf/CV Zallot Rémi Jun 2022 Website.pdf
