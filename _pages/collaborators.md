@@ -11,8 +11,8 @@ Collaborators
 - Valérie de Crécy-Lagard <a href="https://microcell.ufl.edu/people/valerie-de-crecy-lagard">(University of Florida)</a>
 - Wen Shan Yew <a href="https://medicine.nus.edu.sg/bch/faculty/yew-wen-shan/">(National University of Singapore)</a>
 - Josie Parker <a href="https://profiles.cardiff.ac.uk/staff/parkerj21">(Cardiff University)</a>
-- Claire Price <a href="https://www.swansea.ac.uk/staff/c.l.price/">(Swansea University)</a>
 - Hua Wang <a href="https://www.strath.ac.uk/staff/wanghuadr/">(University of Strathclyde)</a>
+- Luiz Pedro de Carvalho <a href="https://wertheim.scripps.ufl.edu/profile/carvalho-luiz-pedro/">(Herbert Wertheim UF Scripps Institute, University of Florida)</a>
 
 How to Collaborate
 =====
