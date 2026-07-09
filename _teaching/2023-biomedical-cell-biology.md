@@ -4,7 +4,7 @@ collection: teaching
 type: "Module Leader"
 permalink: /teaching/biomedical-cell-biology
 venue: "Manchester Metropolitan University, Department of Life Sciences"
-date: 2023-09-01
+date: 2023-09-02
 location: "Manchester, UK"
 ---
 
