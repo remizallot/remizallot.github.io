@@ -4,6 +4,10 @@ permalink: /join/
 ---
 The Zallot Lab at Manchester Metropolitan University welcomes motivated and curious individuals to join our dynamic research team. We offer opportunities for self-funded Master’s by Research and PhD programs, and we welcome postdoctoral researchers aiming to secure external funding. Our research spans bioinformatics, biochemistry, microbiology, and education, with a focus on enhancing human health through a deeper understanding of microbial systems.
 
+Current Team
+======
+- **Dr Lauren R. Hatfield** — Postdoctoral Research Associate (PDRA), funded via the Academy of Medical Sciences Springboard Award
+
 Why Join Us?
 ======
 **Multidisciplinary Research**: Our lab integrates bioinformatics, biochemistry, genetics, and microbiology to tackle complex biological questions.<br />
