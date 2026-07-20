@@ -1,8 +1,8 @@
 var addressPoints = [
   [
     "Identification of a triacylglycerol-lipase from Brassica napus by functional proteomics<br />5th European Symposium on Plant Lipids; Gdansk, Poland (2011)",
-    54.3482907,
-    18.6540233
+    54.4288032,
+    18.798327
   ],
   [
     "Identification of a potential queuine salvage gene in eukaryotes<br />XXIV tRNA Conference; Olmu\u00e9, Chile (2012)",
@@ -21,8 +21,8 @@ var addressPoints = [
   ],
   [
     "Identification of genes involved in Queuosine Salvage<br />Gordon Research Conference, RNA editing; Lucca (Barga), Italy (2015)",
-    44.0754957,
-    10.4821594
+    44.0469287,
+    10.4767106
   ],
   [
     "Identification of missing enzymes and transporters involved in the synthesis and salvage of Queuosine by comparative genomics<br />EMBO Conference, Ribosome Structure and Function; Strasbourg, France (2016)",
