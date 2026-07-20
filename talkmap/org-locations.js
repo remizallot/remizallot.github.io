@@ -61,8 +61,8 @@ var addressPoints = [
   ],
   [
     "Genomic enzymology web tools for functional assignment: Generating and analysing Sequence Similarity Networks and Genome Neighborhood Networks with the EFI suite<br />Institut Pasteur, Centre of Bioinformatics, Biostatistics and Integrative Biology; Paris, France (2019)",
-    48.8588897,
-    2.320041
+    48.8534951,
+    2.3483915
   ],
   [
     "Similarity Networks and Genome Neighborhood Networks for function assignment<br />School of Chemistry, Cardiff University; Cardiff, United Kingdom (2021)",
