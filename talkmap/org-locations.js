@@ -120,6 +120,11 @@ var addressPoints = [
     -2.2399882
   ],
   [
+    "Poster presentation<br />7th Forum of Respiratory Tract Infections; Glasgow, United Kingdom (2025)",
+    55.861155,
+    -4.2501687
+  ],
+  [
     "Leicester 2025 summer session of the Acid Fast Club meeting<br />Acid Fast Club; Leicester, United Kingdom (2025)",
     52.6362,
     -1.1331969
