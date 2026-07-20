@@ -13,7 +13,7 @@ title                    : "Rémi Zallot"
 title_separator          : "-"
 name                     : &name "Rémi Zallot"
 description              : &description "Rémi Zallot is a Senior Lecturer (Associate Professor) in Biochemistry at Manchester Metropolitan University, UK, researching microbial genes and enzymes to advance drug discovery and human health."
-url                      : https://remizallot.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
+url                      : https://remizallot.com # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "remizallot/remizallot.github.io"
 
