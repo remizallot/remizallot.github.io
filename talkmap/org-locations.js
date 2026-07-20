@@ -61,8 +61,8 @@ var addressPoints = [
   ],
   [
     "Genomic enzymology web tools for functional assignment: Generating and analysing Sequence Similarity Networks and Genome Neighborhood Networks with the EFI suite<br />Institut Pasteur, Centre of Bioinformatics, Biostatistics and Integrative Biology; Paris, France (2019)",
-    48.8588897,
-    2.320041
+    48.8534951,
+    2.3483915
   ],
   [
     "Similarity Networks and Genome Neighborhood Networks for function assignment<br />School of Chemistry, Cardiff University; Cardiff, United Kingdom (2021)",
@@ -70,14 +70,14 @@ var addressPoints = [
     -3.1791934
   ],
   [
-    "Comparative genomics and genomic enzymology approaches for functional assignment<br />Manchester Institute of Biotechnology (MIB) Annual Science Day, The University of Manchester; Manchester, United Kingdom (2022)",
-    53.4424618,
-    -2.2324547
+    "Comparative genomics and genomic enzymology approaches for functional assignment<br />Manchester Institute of Biotechnology (MIB) Annual Science Day, The University of Manchester; 131 Princess Street, Manchester, United Kingdom (2022)",
+    53.4730745,
+    -2.2357845
   ],
   [
-    "Understanding antimicrobial resistance requires characterising unknown genes identified involved<br />Manchester Institute of Biotechnology (MIB) Fellowship days, The University of Manchester; Manchester, United Kingdom (2022)",
-    53.4424618,
-    -2.2324547
+    "Understanding antimicrobial resistance requires characterising unknown genes identified involved<br />Manchester Institute of Biotechnology (MIB) Fellowship days, The University of Manchester; 131 Princess Street, Manchester, United Kingdom (2022)",
+    53.4730745,
+    -2.2357845
   ],
   [
     "Genomic Enzymology and Enzyme Function Initiative (EFI) Training Workshop<br />University of Melbourne; Melbourne, Australia (2023)",
@@ -100,9 +100,9 @@ var addressPoints = [
     116.3912972
   ],
   [
-    "Invited talk<br />Northwest University; Xi'an, China (2023)",
-    34.261004,
-    108.9423363
+    "Invited talk<br />Northwest University; 229 North Taibai Road, Xi'an, China (2023)",
+    34.2507732,
+    108.9232143
   ],
   [
     "Invited virtual seminar for the Catalysis Innovation Consortium<br />Catalysis Innovation Consortium; Virtual, USA (2024)",
@@ -115,9 +115,9 @@ var addressPoints = [
     103.8194992
   ],
   [
-    "Invited talk for MMU ECR and PhD Conference<br />Faculty of Science and Engineering, Manchester Metropolitan University; Manchester, United Kingdom (2024)",
-    53.4424618,
-    -2.2324547
+    "Invited talk for MMU ECR and PhD Conference<br />Faculty of Science and Engineering, Manchester Metropolitan University; Dalton Building, Chester Street, Manchester, United Kingdom (2024)",
+    53.4718563,
+    -2.2399882
   ],
   [
     "Leicester 2025 summer session of the Acid Fast Club meeting<br />Acid Fast Club; Leicester, United Kingdom (2025)",
@@ -135,14 +135,14 @@ var addressPoints = [
     18.4172197
   ],
   [
-    "Department Summer research symposium Seminar<br />Manchester Metropolitan University, Department of Life Sciences; Manchester, United Kingdom (2026)",
-    53.4424618,
-    -2.2324547
+    "Department Summer research symposium Seminar<br />Manchester Metropolitan University, Department of Life Sciences; Dalton Building, Chester Street, Manchester, United Kingdom (2026)",
+    53.4718563,
+    -2.2399882
   ],
   [
-    "Invited Seminar<br />Institute of Medical Research, Northwestern Polytechnical University; Xi'an, China (2026)",
-    34.261004,
-    108.9423363
+    "Invited Seminar<br />Institute of Medical Research, Northwestern Polytechnical University; 127 West Youyi Road, Xi'an, China (2026)",
+    34.2408131,
+    108.911797
   ],
   [
     "Invited Seminar<br />Shanghai Jiao Tong University Medical School; Shanghai, China (2026)",
