@@ -21,8 +21,8 @@ var addressPoints = [
   ],
   [
     "Identification of genes involved in Queuosine Salvage<br />Gordon Research Conference, RNA editing; Lucca (Barga), Italy (2015)",
-    44.0454286,
-    10.4792677
+    44.0754957,
+    10.4821594
   ],
   [
     "Identification of missing enzymes and transporters involved in the synthesis and salvage of Queuosine by comparative genomics<br />EMBO Conference, Ribosome Structure and Function; Strasbourg, France (2016)",
@@ -61,8 +61,8 @@ var addressPoints = [
   ],
   [
     "Genomic enzymology web tools for functional assignment: Generating and analysing Sequence Similarity Networks and Genome Neighborhood Networks with the EFI suite<br />Institut Pasteur, Centre of Bioinformatics, Biostatistics and Integrative Biology; Paris, France (2019)",
-    48.8534951,
-    2.3483915
+    48.8588897,
+    2.320041
   ],
   [
     "Similarity Networks and Genome Neighborhood Networks for function assignment<br />School of Chemistry, Cardiff University; Cardiff, United Kingdom (2021)",
