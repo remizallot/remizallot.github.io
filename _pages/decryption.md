@@ -5,7 +5,7 @@ permalink: /decryption/
 
 In 2018, I drafted and submitted a proposal for the annual Horizon 2020 Framework Programme call for a Marie Skłodowska-Curie Actions Individual Fellowship, supported by the European Commission. My application was successful, and I was awarded the fellowship to carry out my proposed research.
 
-<img src="/images/normal-reproduction-low-resolution.jpg" alt="" width="100"/>
+<img src="/images/normal-reproduction-low-resolution.jpg" alt="European Union flag" width="100"/>
 
 This Marie Skłodowska-Curie Action (MSCA), project number 839116, is titled: “Decrypting Mycobacterium cytochrome P450 (CYP) physiological functions by testing hypotheses derived from large-scale comparative genomics analysis.” It falls under the Individual Fellowship (IF) category in the Reintegration panel for the 2018 call.
 
