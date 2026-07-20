@@ -9,23 +9,26 @@ import frontmatter
 import glob
 import getorg
 from geopy import Nominatim
-from geopy.exc import GeocoderTimedOut
+from geopy.extra.rate_limiter import RateLimiter
 
-# Set the default timeout, in seconds
-TIMEOUT = 5
+# Institutions worked at get a yellow pin instead of the default blue one.
+INSTITUTION_KEYWORDS = [
+    "University of Illinois at Urbana-Champaign",
+    "Manchester Institute of Biotechnology",
+    "Manchester Metropolitan University",
+]
 
 # Collect the Markdown files
 g = glob.glob("_talks/*.md")
 
-# Prepare to geolocate
-geocoder = Nominatim(user_agent="academicpages.github.io")
+# Prepare to geolocate. Nominatim's usage policy caps requests at 1/second, so
+# space requests out and retry on the 429s that a bare geocode() loop hits.
+geocoder = Nominatim(user_agent="academicpages.github.io", timeout=10)
+geocode = RateLimiter(geocoder.geocode, min_delay_seconds=1.5, max_retries=5, error_wait_seconds=5.0)
 location_dict = {}
-location = ""
-permalink = ""
-title = ""
 
 # Perform geolocation
-for file in g:
+for file in sorted(g):
     # Read the file
     data = frontmatter.load(file)
     data = data.to_dict()
@@ -38,19 +41,90 @@ for file in g:
     title = data['title'].strip()
     venue = data['venue'].strip()
     location = data['location'].strip()
-    description = f"{title}<br />{venue}; {location}"
+    year = data['date'].year
+    description = f"{title}<br />{venue}; {location} ({year})"
 
     # Geocode the location and report the status
     try:
-        location_dict[description] = geocoder.geocode(location, timeout=TIMEOUT)
+        location_dict[description] = geocode(location)
         print(description, location_dict[description])
-    except ValueError as ex:
-        print(f"Error: geocode failed on input {location} with message {ex}")
-    except GeocoderTimedOut as ex:
-        print(f"Error: geocode timed out on input {location} with message {ex}")
     except Exception as ex:
         print(f"An unhandled exception occurred while processing input {location} with message {ex}")
 
 # Save the map
 m = getorg.orgmap.create_map_obj()
 getorg.orgmap.output_html_cluster_map(location_dict, folder_name="talkmap", hashed_usernames=False)
+
+# getorg's own map.html template doesn't know about institution highlighting,
+# and its instructional <span> doesn't match this site's fonts. Rewrite the
+# generated map.html with our own fixed template instead of hand-patching
+# getorg's output, so every regeneration (including CI) produces the same
+# result regardless of what getorg's template looks like.
+MAP_HTML = """
+    <!DOCTYPE html>
+    <html>
+    <head>
+    	<title>Leaflet debug page</title>
+
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.css" />
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.js"></script>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<link rel="stylesheet" href="leaflet_dist/screen.css" />
+
+    	<link rel="stylesheet" href="leaflet_dist/MarkerCluster.css" />
+    	<link rel="stylesheet" href="leaflet_dist/MarkerCluster.Default.css" />
+    	<script src="leaflet_dist/leaflet.markercluster-src.js"></script>
+    	<script src="org-locations.js"></script>
+
+    </head>
+    <body>
+
+    	<div id="map"></div>
+    	<script type="text/javascript">
+    		var tiles = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+              maxZoom: 18,
+              attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+                    }),
+    			latlng = L.latLng(30, 10);
+    		var map = L.map('map', {center: latlng, zoom: 0.7, layers: [tiles]});
+    		var markers = L.markerClusterGroup({
+    			showCoverageOnHover: false,
+    			maxClusterRadius: 80
+    			});
+
+    		// Institutions worked at get a yellow pin instead of the default blue one.
+    		var institutionKeywords = %(institution_keywords)s;
+    		var institutionIcon = L.divIcon({
+    			className: 'institution-marker',
+    			html: '<svg width="25" height="41" viewBox="0 0 25 41" xmlns="http://www.w3.org/2000/svg">' +
+    				'<path d="M12.5 0C5.6 0 0 5.6 0 12.5c0 9.4 12.5 28.5 12.5 28.5S25 21.9 25 12.5C25 5.6 19.4 0 12.5 0z" fill="#FFC107" stroke="#8a6d00" stroke-width="1"/>' +
+    				'<circle cx="12.5" cy="12.5" r="5" fill="#ffffff"/></svg>',
+    			iconSize: [25, 41],
+    			iconAnchor: [12, 41],
+    			popupAnchor: [1, -34]
+    		});
+
+    		for (var i = 0; i < addressPoints.length; i++) {
+    			var a = addressPoints[i];
+    			var title = a[0];
+    			var isInstitution = institutionKeywords.some(function (keyword) {
+    				return title.indexOf(keyword) !== -1;
+    			});
+    			var markerOptions = { title: title };
+    			if (isInstitution) {
+    				markerOptions.icon = institutionIcon;
+    			}
+    			var marker = L.marker(new L.LatLng(a[1], a[2]), markerOptions);
+    			marker.bindPopup(title);
+    			markers.addLayer(marker);
+    		}
+    		map.addLayer(markers);
+    		map.zoomIn();
+    	</script>
+    </body>
+    </html>
+    """
+
+keywords_js = "[\n" + ",\n".join(f"\t\t\t'{kw}'" for kw in INSTITUTION_KEYWORDS) + "\n\t\t]"
+with open("talkmap/map.html", "w") as f:
+    f.write(MAP_HTML % {"institution_keywords": keywords_js})
