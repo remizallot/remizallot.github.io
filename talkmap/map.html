@@ -33,7 +33,15 @@
     		var map = L.map('map', {center: latlng, zoom: 0.7, layers: [tiles]});
     		var markers = L.markerClusterGroup({
     			showCoverageOnHover: false,
-    			maxClusterRadius: 80
+    			// maxClusterRadius is normally a fixed pixel radius, which groups
+    			// wildly different real-world distances depending on zoom level.
+    			// Use a distance-based radius instead so only talks that are
+    			// genuinely close together (~1km) ever cluster, at any zoom.
+    			maxClusterRadius: function (zoom) {
+    				var desiredMeters = 1000;
+    				var metersPerPixel = 156543.03392 / Math.pow(2, zoom);
+    				return desiredMeters / metersPerPixel;
+    			}
     			});
 
     		// Institutions worked at get a yellow pin instead of the default blue one.
