@@ -123,9 +123,9 @@ MAP_HTML = """
     			// maxClusterRadius is normally a fixed pixel radius, which groups
     			// wildly different real-world distances depending on zoom level.
     			// Use a distance-based radius instead so only talks that are
-    			// genuinely close together (~1km) ever cluster, at any zoom.
+    			// genuinely close together (~200m) ever cluster, at any zoom.
     			maxClusterRadius: function (zoom) {
-    				var desiredMeters = 1000;
+    				var desiredMeters = 200;
     				var metersPerPixel = 156543.03392 / Math.pow(2, zoom);
     				return desiredMeters / metersPerPixel;
     			}
