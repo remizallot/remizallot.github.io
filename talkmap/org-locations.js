@@ -61,8 +61,8 @@ var addressPoints = [
   ],
   [
     "Genomic enzymology web tools for functional assignment: Generating and analysing Sequence Similarity Networks and Genome Neighborhood Networks with the EFI suite<br />Institut Pasteur, Centre of Bioinformatics, Biostatistics and Integrative Biology; Paris, France (2019)",
-    48.8534951,
-    2.3483915
+    48.8588897,
+    2.320041
   ],
   [
     "Similarity Networks and Genome Neighborhood Networks for function assignment<br />School of Chemistry, Cardiff University; Cardiff, United Kingdom (2021)",
@@ -153,5 +153,20 @@ var addressPoints = [
     "Summer 2026 meeting of the Acid Fast Club<br />Liverpool School of Tropical Medicine; Liverpool, United Kingdom (2026)",
     53.3933411,
     -2.9166389
+  ],
+  [
+    "Initial training: Licence, Master's & PhD<br />Universit\u00e9 de Bordeaux Segalen; 146 Rue L\u00e9o Saignat, 33000 Bordeaux, France (2003\u20132011)",
+    44.8259682,
+    -0.6079583
+  ],
+  [
+    "Postdoctoral Researcher<br />Microbiology and Cell Science Department, University of Florida; Gainesville, FL, USA (2011\u20132016)",
+    29.6519684,
+    -82.3249846
+  ],
+  [
+    "Marie Sk\u0142odowska-Curie Individual Fellow<br />Institute of Life Science, Swansea University Medical School; Swansea, United Kingdom (2019\u20132022)",
+    51.6195955,
+    -3.9459248
   ]
 ];

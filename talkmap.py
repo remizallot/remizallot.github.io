@@ -5,15 +5,23 @@
 # with geopy/Nominatim, and uses the getorg library to output data, HTML, and
 # Javascript for a standalone cluster map. This is functionally the same as the
 # #talkmap Jupyter notebook.
+#
+# Career/training stages that aren't covered by any talk (e.g. where I
+# trained or worked but never gave a talk there) live in _data/career.yml and
+# are geocoded and pinned the same way.
 import frontmatter
 import glob
+import yaml
 import getorg
 from geopy import Nominatim
 from geopy.extra.rate_limiter import RateLimiter
 
 # Institutions worked at get a yellow pin instead of the default blue one.
 INSTITUTION_KEYWORDS = [
+    "Université de Bordeaux",
+    "University of Florida",
     "University of Illinois at Urbana-Champaign",
+    "Swansea University",
     "Manchester Institute of Biotechnology",
     "Manchester Metropolitan University",
 ]
@@ -27,7 +35,7 @@ geocoder = Nominatim(user_agent="academicpages.github.io", timeout=10)
 geocode = RateLimiter(geocoder.geocode, min_delay_seconds=1.5, max_retries=5, error_wait_seconds=5.0)
 location_dict = {}
 
-# Perform geolocation
+# Perform geolocation for talks
 for file in sorted(g):
     # Read the file
     data = frontmatter.load(file)
@@ -51,19 +59,37 @@ for file in sorted(g):
     except Exception as ex:
         print(f"An unhandled exception occurred while processing input {location} with message {ex}")
 
+# Perform geolocation for career/training stages not covered by a talk
+with open("_data/career.yml") as f:
+    career = yaml.safe_load(f)
+
+for entry in career:
+    title = entry['title'].strip()
+    venue = entry['venue'].strip()
+    location = entry['location'].strip()
+    description = f"{title}<br />{venue}; {location} ({entry['start_year']}–{entry['end_year']})"
+
+    try:
+        location_dict[description] = geocode(location)
+        print(description, location_dict[description])
+    except Exception as ex:
+        print(f"An unhandled exception occurred while processing input {location} with message {ex}")
+
 # Save the map
 m = getorg.orgmap.create_map_obj()
 getorg.orgmap.output_html_cluster_map(location_dict, folder_name="talkmap", hashed_usernames=False)
 
 # getorg's own map.html template doesn't know about institution highlighting,
-# and its instructional <span> doesn't match this site's fonts. Rewrite the
-# generated map.html with our own fixed template instead of hand-patching
-# getorg's output, so every regeneration (including CI) produces the same
-# result regardless of what getorg's template looks like.
+# doesn't style the Leaflet attribution control to match this site's font,
+# and its instructional <span> doesn't match this site's fonts either.
+# Rewrite the generated map.html with our own fixed template instead of
+# hand-patching getorg's output, so every regeneration (including CI)
+# produces the same result regardless of what getorg's template looks like.
 MAP_HTML = """
     <!DOCTYPE html>
     <html>
     <head>
+    	<meta charset="utf-8" />
     	<title>Leaflet debug page</title>
 
     	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.css" />
@@ -75,6 +101,11 @@ MAP_HTML = """
     	<link rel="stylesheet" href="leaflet_dist/MarkerCluster.Default.css" />
     	<script src="leaflet_dist/leaflet.markercluster-src.js"></script>
     	<script src="org-locations.js"></script>
+    	<style>
+    		body, .leaflet-container {
+    			font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    		}
+    	</style>
 
     </head>
     <body>

@@ -1,0 +1,19 @@
+# Career and training stages that don't otherwise appear on the talk map
+# (i.e. aren't already covered by an entry in _talks/). Picked up by
+# talkmap.py / talkmap.ipynb alongside the talks and pinned in yellow,
+# same as any other institution worked at.
+- title: "Initial training: Licence, Master's & PhD"
+  venue: "Université de Bordeaux Segalen"
+  location: "146 Rue Léo Saignat, 33000 Bordeaux, France"
+  start_year: 2003
+  end_year: 2011
+- title: "Postdoctoral Researcher"
+  venue: "Microbiology and Cell Science Department, University of Florida"
+  location: "Gainesville, FL, USA"
+  start_year: 2011
+  end_year: 2016
+- title: "Marie Skłodowska-Curie Individual Fellow"
+  venue: "Institute of Life Science, Swansea University Medical School"
+  location: "Swansea, United Kingdom"
+  start_year: 2019
+  end_year: 2022
