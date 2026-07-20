@@ -21,8 +21,8 @@ var addressPoints = [
   ],
   [
     "Identification of genes involved in Queuosine Salvage<br />Gordon Research Conference, RNA editing; Lucca (Barga), Italy (2015)",
-    44.0469287,
-    10.4767106
+    44.0454286,
+    10.4792677
   ],
   [
     "Identification of missing enzymes and transporters involved in the synthesis and salvage of Queuosine by comparative genomics<br />EMBO Conference, Ribosome Structure and Function; Strasbourg, France (2016)",
@@ -153,20 +153,5 @@ var addressPoints = [
     "Summer 2026 meeting of the Acid Fast Club<br />Liverpool School of Tropical Medicine; Liverpool, United Kingdom (2026)",
     53.3933411,
     -2.9166389
-  ],
-  [
-    "Initial training: Licence, Master's & PhD<br />Universit\u00e9 de Bordeaux Segalen; 146 Rue L\u00e9o Saignat, 33000 Bordeaux, France (2003\u20132011)",
-    44.8259682,
-    -0.6079583
-  ],
-  [
-    "Postdoctoral Researcher<br />Microbiology and Cell Science Department, University of Florida; Gainesville, FL, USA (2011\u20132016)",
-    29.6519684,
-    -82.3249846
-  ],
-  [
-    "Marie Sk\u0142odowska-Curie Individual Fellow<br />Institute of Life Science, Swansea University Medical School; Swansea, United Kingdom (2019\u20132022)",
-    51.6195955,
-    -3.9459248
   ]
 ];
