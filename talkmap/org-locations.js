@@ -21,8 +21,8 @@ var addressPoints = [
   ],
   [
     "Identification of genes involved in Queuosine Salvage<br />Gordon Research Conference, RNA editing; Lucca (Barga), Italy (2015)",
-    44.0469287,
-    10.4767106
+    44.0454286,
+    10.4792677
   ],
   [
     "Identification of missing enzymes and transporters involved in the synthesis and salvage of Queuosine by comparative genomics<br />EMBO Conference, Ribosome Structure and Function; Strasbourg, France (2016)",
