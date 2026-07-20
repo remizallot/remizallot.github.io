@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /cv/
+Disallow: /files/pdf/
+
+Sitemap: https://remizallot.github.io/sitemap.xml
