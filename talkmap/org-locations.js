@@ -21,8 +21,8 @@ var addressPoints = [
   ],
   [
     "Identification of genes involved in Queuosine Salvage<br />Gordon Research Conference, RNA editing; Lucca (Barga), Italy (2015)",
-    44.0754957,
-    10.4821594
+    44.0454286,
+    10.4792677
   ],
   [
     "Identification of missing enzymes and transporters involved in the synthesis and salvage of Queuosine by comparative genomics<br />EMBO Conference, Ribosome Structure and Function; Strasbourg, France (2016)",
@@ -140,9 +140,9 @@ var addressPoints = [
     -2.2399882
   ],
   [
-    "Invited Seminar<br />Institute of Medical Research, Northwestern Polytechnical University; 127 West Youyi Road, Xi'an, China (2026)",
-    34.2408131,
-    108.911797
+    "Invited Seminar<br />Institute of Medical Research, Northwestern Polytechnical University; Chang'an District, Xi'an, China (2026)",
+    34.1598597,
+    108.9023547
   ],
   [
     "Invited Seminar<br />Shanghai Jiao Tong University Medical School; Shanghai, China (2026)",
