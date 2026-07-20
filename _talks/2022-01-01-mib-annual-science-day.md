@@ -3,7 +3,7 @@ title: "Comparative genomics and genomic enzymology approaches for functional as
 collection: talks
 type: "Poster"
 permalink: /talks/2022-01-01-mib-annual-science-day
-venue: "Manchester Institute of Biotechnology Annual Science Day"
+venue: "Manchester Institute of Biotechnology (MIB) Annual Science Day, The University of Manchester"
 date: 2022-01-01
 location: "Manchester, United Kingdom"
 ---

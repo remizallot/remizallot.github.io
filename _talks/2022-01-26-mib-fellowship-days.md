@@ -3,7 +3,7 @@ title: "Understanding antimicrobial resistance requires characterising unknown g
 collection: talks
 type: "Invited talk"
 permalink: /talks/2022-01-26-mib-fellowship-days
-venue: "Manchester Institute of Biotechnology Fellowship days, The University of Manchester"
+venue: "Manchester Institute of Biotechnology (MIB) Fellowship days, The University of Manchester"
 date: 2022-01-26
 location: "Manchester, United Kingdom"
 ---
