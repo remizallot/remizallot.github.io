@@ -28,12 +28,12 @@ To further develop my bioinformatics skills, I became part of the <a href="https
 As a Marie Skłodowska-Curie Fellow at <a href="https://www.swansea.ac.uk/medicine/">Swansea University Medical School</a>, UK, I led the <a href="https://cordis.europa.eu/project/id/839116">deCrYPtion project (ID 839116)</a>, which aimed to use large-scale comparative genomics to uncover the functions of Mycobacterium cytochrome P450 enzymes. Concurrently, I completed the <a href="https://www.swansea.ac.uk/iss/salt/">Teaching in Higher Education Postgraduate Certification programme</a> at Swansea and became a <a href="https://www.advance-he.ac.uk/fellowship/fellowship">Fellow of the Higher Education Academy (FHEA)</a>.<br />
 Following this, I worked as a Research Associate at the <a href="https://www.mib.manchester.ac.uk/">Manchester Institute of Biotechnology (MIB)</a>, an affiliate of <a href="https://www.manchester.ac.uk/">The University of Manchester</a>, until 2023.<br />
 
-**Since June 2023, I have been serving as a Lecturer (Assistant Professor), and since August 2024 as a Senior Lecturer (Associate Professor), in Biochemistry in the <a href="https://www.mmu.ac.uk/life-sciences/">Department of Life Sciences</a> at <a href="https://www.mmu.ac.uk/">Manchester Metropolitan University</a>.**
+**In June 2023, I joined the Department of Life Sciences at <a href="https://www.mmu.ac.uk/">Manchester Metropolitan University</a> as a Lecturer (Assistant Professor) in Biochemistry, and was promoted to Senior Lecturer (Associate Professor) in August 2024. Following a restructuring of the Faculty of Science and Engineering in August 2026, I am now part of the <a href="https://www.mmu.ac.uk/about-us/faculties/science-engineering/schools/biological-chemical-sciences">School of Biological and Chemical Sciences</a>.**
 
 Current functions
 ======
 I serve as the **Module Leader for Biomedical Cell Biology (BCB)**, a final-year optional module for students in the accredited Biomedical Science programme. Additionally, I teach on other modules, including Medical Microbiology, and supervise students in their final-year projects.<br />
-After obtaining my certification, I became a **Carbon Literacy Champion** for the Department of Life Sciences and am part of the team that provides <a href="https://www.mmu.ac.uk/sustainability/carbon-literacy">Carbon Literacy training for students</a>.
+After obtaining my certification, I became a **Carbon Literacy Champion** for the <a href="https://www.mmu.ac.uk/about-us/faculties/science-engineering/schools/biological-chemical-sciences">School of Biological and Chemical Sciences</a> and am part of the team that provides <a href="https://www.mmu.ac.uk/sustainability/carbon-literacy">Carbon Literacy training for students</a>.
 
 I act as the bacterial lead for the University’s **Genetically Modified Organisms Health and Safety Committee**.
 

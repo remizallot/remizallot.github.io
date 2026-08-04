@@ -3,7 +3,7 @@ title: "Biomedical Cell Biology (BCB)"
 collection: teaching
 type: "Module Leader"
 permalink: /teaching/biomedical-cell-biology
-venue: "Manchester Metropolitan University, Department of Life Sciences"
+venue: "Manchester Metropolitan University, School of Biological and Chemical Sciences"
 date: 2023-09-02
 location: "Manchester, UK"
 ---

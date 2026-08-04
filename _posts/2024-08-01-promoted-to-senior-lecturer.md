@@ -7,4 +7,4 @@ tags:
   - career
 ---
 
-Since August 2024, I've been Senior Lecturer (Associate Professor) in Biochemistry in the [Department of Life Sciences](https://www.mmu.ac.uk/life-sciences/) at [Manchester Metropolitan University](https://www.mmu.ac.uk/), having joined as Lecturer (Assistant Professor) in June 2023.
+Since August 2024, I've been Senior Lecturer (Associate Professor) in Biochemistry in the [Department of Life Sciences](https://www.mmu.ac.uk/about-us/faculties/science-engineering/schools/biological-chemical-sciences) at [Manchester Metropolitan University](https://www.mmu.ac.uk/), having joined as Lecturer (Assistant Professor) in June 2023.
