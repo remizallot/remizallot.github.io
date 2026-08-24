@@ -1,101 +1,168 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# remizallot.github.io
 
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
+Personal academic site of Rémi Zallot, Senior Lecturer (Associate Professor) in
+Biochemistry at Manchester Metropolitan University.
+Live at **[remizallot.com](https://remizallot.com)**.
 
-# Getting Started
+Jekyll, built from a fork of [Academic Pages](https://academicpages.github.io) (itself a
+fork of [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)). GitHub Pages
+publishes it from the `master` branch; the custom domain lives in `CNAME`. Pushing to
+`master` rebuilds the site within a minute or two — there is no PR flow.
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Edit site-wide configuration in `_config.yml` and double check that the `url` is the one that you just selected in the previous step and that `repository` reflects the correct path for your repository.
-1. Add your site content, upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+## Local preview
 
-See more info at https://academicpages.github.io/
-
-### Additional Tutorials
-
-Additional tutorials for working with the Academic Pages template can be found at the following sites:
-- https://jayrobwilliams.com/posts/2020/06/academic-website/
-
-## Running locally
-
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
-
-1. Clone the repository and made updates as detailed above.
-
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distributions and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try running `sudo apt install ruby-dev ruby-bundler nodejs` again.
-
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
-
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stopping and restarting Jekyll.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
+The repository ships a Docker setup, which is the least fiddly option:
 
 ```bash
-chmod -R 777 .
 docker compose up
 ```
 
-You should now be able to access the website from `localhost:4000`.
+The site is then at <http://localhost:4000>. `_config_docker.yml` overrides `url` to an
+empty string, so internal links resolve against localhost instead of sending you to the
+live site — that override is why previewing through Docker works properly.
 
-### Using the DevContainer in VS Code
+Without Docker, using the `Gemfile`:
 
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
+```bash
+bundle install
+bundle exec jekyll serve -l -H localhost
+```
 
-# Maintenance
+This needs a reasonably current Ruby — the container uses 3.2. The Ruby that ships with
+macOS (2.6) is too old to install these gems, which is the usual reason this route fails
+where `docker compose up` succeeds. Note also that serving this way uses `_config.yml`
+alone, so `url` still points at the live domain and internal links will navigate off your
+local copy; add `--config _config.yml,_config_docker.yml` to get the relative-link
+behaviour the Docker setup has by default.
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+A build is not strictly required for a text-only change, but do check that the YAML front
+matter parses: an unescaped apostrophe in a single-quoted `title` or `citation` breaks the
+whole build, and GitHub Pages fails quietly when it happens.
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii), and additional maintainers would be welcome.
+## Repository layout
 
-## Bugfixes and enhancements
+| Path | Contents |
+| --- | --- |
+| `_publications/` | One file per paper. Rendered on `/publications/`. |
+| `_posts/` | News items. Rendered on `/year-archive/` and in the homepage feed. |
+| `_talks/`, `_teaching/`, `_portfolio/` | Other collections. `_portfolio/` is the "Tools" tab. |
+| `_pages/` | Standalone pages: `about.md` (the homepage), `collaborators.md`, `cv.md`, `funding.md`, `join.md`, … |
+| `_data/navigation.yml` | Top navigation. |
+| `_data/career.yml` | Career stages pinned on the talk map. |
+| **`cv/`** | **LaTeX source for the CV — see [The CV](#the-cv) below.** |
+| `files/pdf/CV-Zallot-Remi.pdf` | The published CV, served by `/cv/`. A copy of `cv/cv.pdf`. |
+| `markdown_generator/` | Legacy scripts that once produced collection files from spreadsheets. No longer used; entries are hand-written. |
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of the template to your fork as well.
+## The CV
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize, although [rebasing](https://git-scm.com/docs/git-rebase) the changes from this template will work along with manually [cherry picking](https://git-scm.com/docs/git-cherry-pick) the relevant commits. If you are not comfortable with the Git command line, you can save your various `.yml` configuration files and Markdown files, delete the repository, and fork it again. 
+**The CV is not a hand-maintained binary — it is built from LaTeX source in
+[`cv/`](cv/), which is version-controlled here.** Full instructions are in
+[`cv/README.md`](cv/README.md); in short:
 
+- `cv/cv.tex` — the CV itself. Edit this for wording and section changes.
+- `cv/publications.bib` — a BibTeX database generated from `_publications/*.md`. The site
+  is the source of truth, so regenerate it with the script in `cv/README.md` rather than
+  editing it by hand.
+- `cv/cv.pdf` — the compiled output.
+
+To rebuild after adding a publication:
+
+```bash
+# 1. regenerate cv/publications.bib  (script in cv/README.md, run from the repo root)
+# 2. compile
+cd cv
+pdflatex cv.tex && biber cv && pdflatex cv.tex && pdflatex cv.tex
+# 3. publish the result where /cv/ serves it
+cp cv.pdf ../files/pdf/CV-Zallot-Remi.pdf
+```
+
+Two fixups the generator drops every time it regenerates `publications.bib`, and which
+must be reapplied afterwards:
+
+- the PhD thesis entry must be `@phdthesis` with no `journal` field (the script always
+  emits `@article`, leaving a bogus `journal = {n.d.}`);
+- Greek letters need math mode — `$\beta$-lactone`, not `β-lactone`.
+
+Compiling needs only a standard TeX Live or MacTeX install.
+
+## Adding a publication
+
+Three steps, all in one commit — an entry without a news post is easy to miss.
+
+**1. `_publications/YYYY-MM-DD-Title-With-Hyphens.md`**
+
+```yaml
 ---
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
+title: "Sentence case, exactly as published"
+collection: publication
+category: manuscripts        # or: books, conferences
+permalink: /publication/YYYY-MM-DD-Title-With-Hyphens   # == the filename, minus .md
+excerpt: 'DOI: 10.xxxx/yyyy'
+date: YYYY-MM-DD
+venue: 'Full journal name'
+citation: 'Author One, Author Two, … &quot;Title.&quot; Venue, Volume(Issue), article number, Year.'
+number: 1
+---
+DOI: [10.xxxx/yyyy](https://doi.org/10.xxxx/yyyy)
+```
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+Conventions that are easy to get wrong:
+
+- `permalink` must match the filename. The slug strips punctuation and accents:
+  `β-lactone` became `lactone`.
+- `citation` is a YAML string that ends up in HTML, so quotes are written `&quot;` and a
+  literal `&` is `&amp;`. Author names keep their accents (`Rémi Zallot`).
+- Older entries carry a `YYYY-01-01` date because the old generator only had the year.
+  New entries use the real publication date; sorting is by `date`, newest first.
+- `number` counts **down from newest**: the newest paper is `number: 1` and every existing
+  entry shifts by one. Nothing renders it, but the sequence is kept intact.
+
+**2. `_posts/YYYY-MM-DD-short-slug.md`** — a news item announcing it:
+
+```yaml
+---
+title: 'Sentence case, no trailing period'
+date: YYYY-MM-DD
+permalink: /posts/YYYY/MM/short-slug/
+tags:
+  - news
+  - publications
+---
+```
+
+**3. Rebuild the CV** ([above](#the-cv)), and check whether anything else moved —
+`_pages/about.md` carries the current affiliation and roles, and `_pages/collaborators.md`
+lists collaborators by name and institution. A new co-author is not automatically a
+collaborator.
+
+## Writing style for news posts
+
+First person, as Rémi. Plain and factual, no press-release register. A post about a paper
+usually states what came out and where (linking the title to its `/publication/…` page
+rather than straight to the DOI), says what the finding is in two or three sentences a
+biochemist outside the subfield can follow, says what Rémi's own contribution was —
+usually the bioinformatics — and ends with the DOI link.
+
+Species names are italicised (`*Mycobacterium tuberculosis*`, then `*M. tuberculosis*`);
+this works in post titles too, because the theme renders Markdown in titles everywhere
+they appear. Gene names are lowercase italic, protein names roman (`rv2531c` / `Rv2531c`).
+British spelling throughout: "characterised", "organisation", "analyse".
+
+## Page layouts
+
+The collection index pages — News, Publications, Talks, Teaching and Tools — use compact
+list layouts rather than the template's card/tile style:
+
+| Include | Used by |
+| --- | --- |
+| `_includes/compact-list-style.html` | Shared styling for all five pages. Colours come from the theme's CSS variables, so light and dark both follow the site toggle. |
+| `_includes/archive-single-publication.html` | Publications, as a numbered bibliography. |
+| `_includes/archive-single-compact.html` | Talks, Teaching and Tools. |
+
+The template's original `_includes/archive-single.html` is still used by `single.html`,
+`talk.html` and the taxonomy and category/tag archive pages, so it is deliberately kept.
+
+## Credits
+
+Forked from [Academic Pages](https://github.com/academicpages/academicpages.github.io),
+which is © 2016 Michael Rose and released under the MIT License (see `LICENSE`).
