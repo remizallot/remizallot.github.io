@@ -5,10 +5,10 @@ permalink: /portfolio/
 author_profile: true
 ---
 
-{% include base_path %}
+{% include compact-list-style.html %}
 
-
+<ul class="entry-list">
 {% for post in site.portfolio reversed %}
-  {% include archive-single.html %}
+  {% include archive-single-compact.html %}
 {% endfor %}
-
+</ul>

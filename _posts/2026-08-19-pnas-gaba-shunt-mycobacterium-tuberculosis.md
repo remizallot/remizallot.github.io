@@ -1,5 +1,5 @@
 ---
-title: 'New paper in PNAS: a cloaked glutamate decarboxylase in Mycobacterium tuberculosis'
+title: 'New paper in PNAS: a cloaked glutamate decarboxylase in *Mycobacterium tuberculosis*'
 date: 2026-08-19
 permalink: /posts/2026/08/pnas-gaba-shunt-mycobacterium-tuberculosis/
 tags:

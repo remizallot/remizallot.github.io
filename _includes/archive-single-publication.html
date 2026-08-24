@@ -1,0 +1,22 @@
+{% include base_path %}
+
+{%- comment -%}
+  The citation front matter is a single HTML-escaped string of the form
+  `Authors. &quot;Title.&quot; Venue, volume(issue), article, Year.`
+  Split it on the quote entity to reuse the author list and the trailing
+  bibliographic detail without repeating the venue, which is rendered
+  separately so it can be italicised. The venue is stripped in both its
+  escaped and literal forms because `citation` writes `&amp;` where the
+  `venue` field carries a bare `&`.
+{%- endcomment -%}
+{%- assign cite_parts = post.citation | split: '&quot;' -%}
+{%- assign pub_authors = cite_parts[0] | strip -%}
+{%- assign venue_escaped = post.venue | replace: "&", "&amp;" -%}
+{%- assign pub_tail = cite_parts[2] | strip | remove_first: venue_escaped | remove_first: post.venue | strip -%}
+{%- assign pub_doi = post.excerpt | strip_html | remove: "DOI:" | strip -%}
+
+<li class="pub-item">
+  <a class="pub-item__title" href="{{ base_path }}{{ post.url }}">{{ post.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</a>
+  {% if pub_authors != "" %}<span class="pub-item__authors">{{ pub_authors }}</span>{% endif %}
+  <span class="pub-item__venue"><em>{{ post.venue | escape_once }}</em>{% if pub_tail != "" %}{{ pub_tail }}{% else %}, {{ post.date | date: "%Y" }}.{% endif %}{% if pub_doi != "" %} &middot; <a href="https://doi.org/{{ pub_doi }}">doi:{{ pub_doi }}</a>{% endif %}</span>
+</li>

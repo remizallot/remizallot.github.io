@@ -11,26 +11,29 @@ author_profile: true
 
 {% include base_path %}
 
+{% include compact-list-style.html %}
+
 <!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}
-  {% for category in site.publication_category  %}
+  {% for category in site.publication_category %}
     {% assign title_shown = false %}
     {% for post in site.publications reversed %}
       {% if post.category != category[0] %}
         {% continue %}
       {% endif %}
       {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
+        <h2 class="list-heading">{{ category[1].title }}</h2>
+        <ol class="pub-list">
         {% assign title_shown = true %}
       {% endunless %}
-      {% include archive-single.html %}
+      {% include archive-single-publication.html %}
     {% endfor %}
+    {% if title_shown %}</ol>{% endif %}
   {% endfor %}
 {% else %}
+  <ol class="pub-list">
   {% for post in site.publications reversed %}
-    {% include archive-single.html %}
+    {% include archive-single-publication.html %}
   {% endfor %}
+  </ol>
 {% endif %}
-
-
-

@@ -13,6 +13,23 @@ M1 5GD<br>
 Manchester<br>
 United Kingdom
 
+Recent News
+======
+<style>
+.recent-news { list-style: none; padding-left: 0; margin: 0 0 0.75em; }
+.recent-news li { margin-bottom: 0.4em; line-height: 1.4; }
+.recent-news time { color: var(--global-text-color-light); font-size: 0.85em; margin-right: 0.4em; }
+</style>
+<ul class="recent-news">
+{% for post in site.posts limit: 3 %}
+  <li>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
+    <a href="{{ post.url | relative_url }}">{{ post.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</a>
+  </li>
+{% endfor %}
+</ul>
+<p><a href="{{ '/year-archive/' | relative_url }}">All news &rarr;</a></p>
+
 Interests and Expertise
 ======
 **My aim is to advance our fundamental understanding of microbes to enhance human health.**<br />

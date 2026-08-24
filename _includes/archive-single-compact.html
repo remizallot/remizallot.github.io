@@ -1,0 +1,21 @@
+{% include base_path %}
+
+{%- comment -%}
+  Compact list entry for the talks and teaching collections: linked title, a
+  single muted meta line built from whichever of type/venue/location/date the
+  entry actually defines, and the body text when there is any.
+{%- endcomment -%}
+{%- capture entry_meta -%}
+  {%- if post.type %}{{ post.type }}{% endif -%}
+  {%- if post.venue %}{% if post.type %} &middot; {% endif %}{{ post.venue }}{% endif -%}
+  {%- if post.location %}{% if post.type or post.venue %}, {% endif %}{{ post.location }}{% endif -%}
+  {%- if post.date %}{% if post.type or post.venue or post.location %} &middot; {% endif %}{{ post.date | date: "%B %Y" }}{% endif -%}
+{%- endcapture -%}
+{%- assign entry_meta = entry_meta | strip -%}
+{%- assign entry_body = post.content | strip -%}
+
+<li class="entry-item">
+  <a class="entry-item__title" href="{{ base_path }}{{ post.url }}">{{ post.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</a>
+  {% if entry_meta != "" %}<span class="entry-item__meta">{{ entry_meta }}</span>{% endif %}
+  {% if entry_body != "" %}<div class="entry-item__body">{{ post.content }}</div>{% endif %}
+</li>

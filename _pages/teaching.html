@@ -5,8 +5,17 @@ permalink: /teaching/
 author_profile: true
 ---
 
-{% include base_path %}
+{% include compact-list-style.html %}
 
+{% assign written_year = '' %}
 {% for post in site.teaching reversed %}
-  {% include archive-single.html %}
+  {% assign year = post.date | date: '%Y' %}
+  {% if year != written_year %}
+    {% unless forloop.first %}</ul>{% endunless %}
+    <h2 id="{{ year | slugify }}" class="list-heading">{{ year }}</h2>
+    <ul class="entry-list">
+    {% assign written_year = year %}
+  {% endif %}
+  {% include archive-single-compact.html %}
+  {% if forloop.last %}</ul>{% endif %}
 {% endfor %}

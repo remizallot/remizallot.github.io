@@ -8,12 +8,21 @@ redirect_from:
 ---
 
 {% include base_path %}
+
+{% include compact-list-style.html %}
+
 {% capture written_year %}'None'{% endcapture %}
 {% for post in site.posts %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% if year != written_year %}
-    <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
+    <h2 id="{{ year | slugify }}" class="list-heading">{{ year }}</h2>
     {% capture written_year %}{{ year }}{% endcapture %}
   {% endif %}
-  {% include archive-single.html %}
+  <article class="news-item">
+    <h3 class="news-item__title">
+      <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</a>
+    </h3>
+    <time class="news-item__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %B %Y" }}</time>
+    <div class="news-item__body">{{ post.content }}</div>
+  </article>
 {% endfor %}

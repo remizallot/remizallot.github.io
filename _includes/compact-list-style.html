@@ -1,0 +1,75 @@
+{%- comment -%}
+  Shared styling for the compact list pages: News, Publications, Talks and
+  Teaching. Colours come from the theme's CSS custom properties so the light
+  and dark palettes both follow the site toggle.
+{%- endcomment -%}
+<style>
+/* Section heading (year, or publication category) */
+.list-heading {
+  margin: 1.5em 0 0.75em;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid var(--global-border-color);
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+}
+.list-heading:first-of-type { margin-top: 0.5em; }
+
+/* News: each post rendered in full */
+.news-item { margin: 0 0 1.5em; }
+.news-item__title { margin: 0 0 0.15em; font-size: 1.15em; line-height: 1.35; }
+.news-item__title a { text-decoration: none; }
+.news-item__date {
+  display: block;
+  margin: 0 0 0.5em;
+  color: var(--global-text-color-light);
+  font-size: 0.8em;
+}
+.news-item__body > *:first-child { margin-top: 0; }
+.news-item__body > *:last-child { margin-bottom: 0; }
+.news-item__body p { margin: 0 0 0.6em; line-height: 1.55; }
+
+/* Publications: numbered bibliography */
+.pub-list { list-style: none; margin: 0; padding: 0; counter-reset: pub; }
+.pub-item { position: relative; margin: 0 0 0.9em; padding-left: 2.4em; line-height: 1.45; }
+.pub-item::before {
+  counter-increment: pub;
+  content: counter(pub) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2em;
+  text-align: right;
+  color: var(--global-text-color-light);
+  font-size: 0.85em;
+}
+.pub-item__title { font-weight: 600; }
+.pub-item__authors,
+.pub-item__venue {
+  display: block;
+  color: var(--global-text-color-light);
+  font-size: 0.85em;
+  line-height: 1.4;
+}
+
+/* Talks and Teaching: title, one meta line, optional body */
+.entry-list { list-style: none; margin: 0; padding: 0; }
+.entry-item { margin: 0 0 1em; line-height: 1.45; }
+.entry-item__title { font-weight: 600; }
+.entry-item__meta {
+  display: block;
+  color: var(--global-text-color-light);
+  font-size: 0.85em;
+  line-height: 1.4;
+}
+.entry-item__body { margin-top: 0.35em; }
+.entry-item__body > *:first-child { margin-top: 0; }
+.entry-item__body > *:last-child { margin-bottom: 0; }
+.entry-item__body p { margin: 0 0 0.5em; line-height: 1.5; }
+/* `list-style` inherits, so restore markers on lists written inside an entry
+   body -- .entry-list clears them for the entry list itself. */
+.entry-item__body ul { list-style: disc; padding-left: 1.3em; margin: 0 0 0.5em; }
+.entry-item__body ol { list-style: decimal; padding-left: 1.3em; margin: 0 0 0.5em; }
+.entry-item__body li { margin: 0 0 0.25em; line-height: 1.5; }
+</style>
