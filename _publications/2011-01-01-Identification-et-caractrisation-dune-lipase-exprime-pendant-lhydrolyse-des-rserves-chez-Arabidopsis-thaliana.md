@@ -7,6 +7,6 @@ excerpt: 'DOI: 10.70675/9dd49aa6zb8d6z4630z8574zc0b1ebd25e43'
 date: 2011-01-01
 venue: ''
 citation: 'Rémi Zallot. &quot;Identification et caractérisation d&amp;apos;une lipase exprimée pendant l&amp;apos;hydrolyse des réserves chez Arabidopsis thaliana.&quot; , 2011.'
-number: 27
+number: 28
 ---
 DOI: [10.70675/9dd49aa6zb8d6z4630z8574zc0b1ebd25e43](https://doi.org/10.70675/9dd49aa6zb8d6z4630z8574zc0b1ebd25e43)
