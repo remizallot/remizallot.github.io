@@ -15,6 +15,6 @@ I contributed the creation and analysis of the sequence similarity network that 
 
 A good reminder of how easily annotation bias propagates across homologous sequences, and of what network-based approaches can reveal when we look at a family as a whole rather than one sequence at a time.
 
-Work led by H. Minh Thai and [Luiz Pedro S. de Carvalho](https://wertheim.scripps.ufl.edu/profile/carvalho-luiz-pedro/), with Debbie M. Hunt, Yugen Miyahara, Manisha Priya and Htin L. Aung.
+Work led by Hai Minh Thai and [Luiz Pedro S. de Carvalho](https://wertheim.scripps.ufl.edu/profile/carvalho-luiz-pedro/), with Debbie M. Hunt, Yugen Miyahara, Manisha Priya and Htin L. Aung.
 
 Read the paper: [10.1073/pnas.2619778123](https://doi.org/10.1073/pnas.2619778123)
