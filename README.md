@@ -82,6 +82,8 @@ must be reapplied afterwards:
 - the PhD thesis entry must be `@phdthesis` with no `journal` field (the script always
   emits `@article`, leaving a bogus `journal = {n.d.}`);
 - Greek letters need math mode — `$\beta$-lactone`, not `β-lactone`.
+- multi-word surnames must be written surname-first so BibTeX splits them correctly —
+  `San Francisco, Brian`, `El Yacoubi, Basma`.
 
 Compiling needs only a standard TeX Live or MacTeX install.
 

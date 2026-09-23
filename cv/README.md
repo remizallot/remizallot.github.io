@@ -28,7 +28,7 @@ This produces `cv.pdf`.
 ## Files
 
 - `cv.tex` -- the CV itself. Edit this directly for wording/section changes.
-- `publications.bib` -- a real BibTeX database of all 29 publications,
+- `publications.bib` -- a real BibTeX database of all 31 publications,
   auto-generated from `_publications/*.md` (see script below). Machine-
   readable and importable into any reference manager, independent of the CV.
 - `.gitignore` -- ignores LaTeX build byproducts (`.aux`, `.bbl`, `.log`, etc).
@@ -62,8 +62,7 @@ for path in sorted(glob.glob("_publications/*.md")):
     m = re.match(r'^(.*?)\.\s*"(.*)"\.\s*(.*?),\s*(\d{4})\.?$', citation)
     authors_raw = m.group(1).strip() if m else citation.split('. "')[0].strip()
     authors = [a.strip() for a in authors_raw.split(",") if a.strip()]
-    truncated = len(authors) == 10  # Google Scholar caps author lists at 10
-    entries.append({"title": title, "year": year, "venue": venue, "authors": authors, "truncated": truncated, "doi": doi})
+    entries.append({"title": title, "year": year, "venue": venue, "authors": authors, "doi": doi})
 
 entries.sort(key=lambda e: (e["year"], e["title"]), reverse=True)
 
@@ -77,7 +76,7 @@ for e in entries:
     key = bibkey(e)
     used[key] = used.get(key, -1) + 1
     if used[key]: key = f"{key}{used[key]}"
-    author_field = " and ".join(e["authors"]) + (" and others" if e["truncated"] else "")
+    author_field = " and ".join(e["authors"])
     title_escaped = e["title"].replace("&", r"\&")
     venue_escaped = (e["venue"] or "n.d.").replace("&", r"\&")
     doi_line = f'\n  doi     = {{{e["doi"]}}},' if e["doi"] else ""
