@@ -2,7 +2,7 @@
 title: "Join the lab!"
 permalink: /join/
 ---
-The Zallot Lab at Manchester Metropolitan University welcomes motivated and curious individuals to join our dynamic research team. We offer opportunities for self-funded Master’s by Research and PhD programs, and we welcome postdoctoral researchers aiming to secure external funding. Our research spans bioinformatics, biochemistry, microbiology, and education, with a focus on enhancing human health through a deeper understanding of microbial systems.
+The Zallot Lab at Manchester Metropolitan University welcomes motivated and curious individuals to join our dynamic research team. We offer opportunities for self-funded Master’s by Research, PhD and Doctor of Clinical Science (DClinSci) programmes, and we welcome postdoctoral researchers aiming to secure external funding. Our research spans bioinformatics, biochemistry, microbiology, and education, with a focus on enhancing human health through a deeper understanding of microbial systems.
 
 Current Team
 ======
@@ -21,6 +21,9 @@ If you are an experienced researcher looking to advance your career in a collabo
 
 **Self-Funded Master’s by Research and PhD Programmes**<br />
 We invite self-funded students to pursue a Master’s by Research or PhD in our lab. Our research focuses on characterising genes, enzymes, and transporters from bacterial pathogens. Have an idea for exploring an important biological process in ESKAPE pathogens? Let us know, and let's work together to develop an application. If you are eager to contribute to impactful research, we encourage you to contact us and then apply. 
+
+**Doctor of Clinical Science (DClinSci)**<br />
+I welcome healthcare scientists on the Higher Specialist Scientist Training (HSST) programme who would like to carry out their DClinSci research project in my lab. Projects focus on clinical microbiology: understanding how bacterial pathogens grow, persist and cause infection, and characterising the genes and enzymes involved in infection and antimicrobial resistance, supported by bioinformatics and biochemistry. Please get in touch to discuss a project idea.
 
 **Undergraduate Final-Year and Master’s Projects**<br />
 We offer various projects annually:<br />

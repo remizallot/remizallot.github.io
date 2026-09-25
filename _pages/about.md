@@ -49,7 +49,7 @@ Following this, I worked as a Research Associate at the <a href="https://www.mib
 
 Current functions
 ======
-I serve as the **Module Leader for Biomedical Cell Biology (BCB)**, a final-year optional module for students in the accredited Biomedical Science programme. Additionally, I teach on other modules, including Medical Microbiology, and supervise students in their final-year projects.<br />
+I serve as the **Module Leader for Biomedical Cell Biology (BCB)**, a final-year optional module for students in the accredited Biomedical Science programme. Additionally, I teach on other modules, including Medical Microbiology, and supervise final-year undergraduate projects and Master's students. I also welcome Doctor of Clinical Science (DClinSci) candidates.<br />
 After obtaining my certification, I became a **Carbon Literacy Champion** for the <a href="https://www.mmu.ac.uk/about-us/faculties/science-engineering/schools/biological-chemical-sciences">School of Biological and Chemical Sciences</a> and am part of the team that provides <a href="https://www.mmu.ac.uk/sustainability/carbon-literacy">Carbon Literacy training for students</a>.
 
 I act as the bacterial lead for the University’s **Genetically Modified Organisms Health and Safety Committee**.
