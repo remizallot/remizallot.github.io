@@ -21,8 +21,8 @@ var addressPoints = [
   ],
   [
     "Identification of genes involved in Queuosine Salvage<br />Gordon Research Conference, RNA editing; Lucca (Barga), Italy (2015)",
-    44.0469287,
-    10.4767106
+    44.0826068,
+    10.4638738
   ],
   [
     "Identification of missing enzymes and transporters involved in the synthesis and salvage of Queuosine by comparative genomics<br />EMBO Conference, Ribosome Structure and Function; Strasbourg, France (2016)",
@@ -158,6 +158,11 @@ var addressPoints = [
     "Summer 2026 meeting of the Acid Fast Club<br />Liverpool School of Tropical Medicine; Liverpool, United Kingdom (2026)",
     53.3933411,
     -2.9166389
+  ],
+  [
+    "EFI web tools workshop, Singapore Enzyme Biology Week<br />National Centre for Engineering Biology (NCEB), National University of Singapore; Singapore (2026)",
+    1.357107,
+    103.8194992
   ],
   [
     "Initial training: Licence, Master's & PhD<br />Universit\u00e9 de Bordeaux Segalen; 146 Rue L\u00e9o Saignat, 33000 Bordeaux, France (2003\u20132011)",
