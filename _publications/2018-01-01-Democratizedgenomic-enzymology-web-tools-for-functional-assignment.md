@@ -7,6 +7,6 @@ excerpt: 'DOI: 10.1016/j.cbpa.2018.09.009'
 date: 2018-01-01
 venue: 'Current opinion in chemical biology'
 citation: 'Rémi Zallot, Nils O. Oberg, John A. Gerlt. &quot;‘Democratized’ genomic enzymology web tools for functional assignment.&quot; Current opinion in chemical biology, 2018.'
-number: 14
+number: 15
 ---
 DOI: [10.1016/j.cbpa.2018.09.009](https://doi.org/10.1016/j.cbpa.2018.09.009)
